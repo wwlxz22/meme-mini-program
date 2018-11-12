@@ -1,0 +1,8 @@
+<!--pages/share/share.wxml-->
+<view>
+  <image src='{{src}}' class='image' mode='widthFix'></image>
+  <button bindtap='edit' class='btn'>自定义表情文字</button>
+  <button bindtap='battle' class='btn'>直接发送，与好友斗图</button>
+</view>
+<button bindtap='pay'>支付</button>
+<ad unit-id="adunit-c00ee437f3e39ec8"></ad>

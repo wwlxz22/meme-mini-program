@@ -1,0 +1,121 @@
+/* pages/edit/edit.wxss */
+
+.edit {
+  margin: 20rpx 25rpx;
+}
+
+page {
+  background: #eee;
+}
+
+.red {
+  width: 80rpx;
+  height: 80rpx;
+  background: red;
+  border-radius: 50rpx;
+}
+
+.black {
+  width: 80rpx;
+  height: 80rpx;
+  background: black;
+  border-radius: 50rpx;
+}
+
+.blue {
+  width: 80rpx;
+  height: 80rpx;
+  background: blue;
+  border-radius: 50rpx;
+}
+
+.orange {
+  width: 80rpx;
+  height: 80rpx;
+  background: orange;
+  border-radius: 50rpx;
+}
+
+.green {
+  width: 80rpx;
+  height: 80rpx;
+  background: green;
+  border-radius: 50rpx;
+}
+
+.color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.very_small {
+  font-size: 16px;
+  background: #fff;
+  height: 20px;
+  width: 50px;
+  text-align: center;
+}
+
+.small {
+  font-size: 16px;
+  background: #fff;
+  height: 20px;
+  text-align: center;
+  width: 50px;
+}
+
+.normal {
+  font-size: 16px;
+  background: #fff;
+  height: 20px;
+  text-align: center;
+  width: 50px;
+}
+
+.big {
+  font-size: 16px;
+  background: #fff;
+  height: 20px;
+  text-align: center;
+  width: 50px;
+}
+
+.very_big {
+  font-size: 16px;
+  background: #fff;
+  height: 20px;
+  text-align: center;
+  width: 50px;
+}
+
+.title {
+  font-size: 14px;
+  padding: 5px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 75rpx;
+  border-radius: 20px;
+  background-color: #2fcf19;
+  height: 80rpx;
+  width: 600rpx;
+  align-self: center;
+  font-size: 28rpx;
+  color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.btn::after {
+  border: none;
+}

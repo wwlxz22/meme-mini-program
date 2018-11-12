@@ -1,0 +1,27 @@
+<!--pages/edit/edit.wxml-->
+<view style='display:{{display}};position:fixed;top:0;left:0;'>
+  <canvas canvas-id='my' style="width:{{picWidth}}px;height:{{picHeight}}px;"></canvas>
+</view>
+<view style=''>
+  <image src='{{raw}}' style="width:{{picWidth}}px;height:{{picHeight}}px" ></image>
+</view>
+<input value='{{value}}' style='position:fixed;top:{{y}}px;left:{{x}}px;height:{{size*2+5}}rpx;font-size:{{size}}px;color:{{color}};z-index:10000' placeholder="请输入表情包的文字" bindtouchmove='move' bindinput='input'></input>
+<view>
+<view class='title'>文字颜色</view>
+<view class='color'>
+  <view class='red' bindtap='changeColor' data-color='red'></view>
+  <view class='black' bindtap='changeColor' data-color='black'></view>
+  <view class='green' bindtap='changeColor' data-color='green'></view>
+  <view class='blue' bindtap='changeColor' data-color='blue'></view>
+  <view class='orange' bindtap='changeColor' data-color='orange'></view>
+</view>
+<view class='title'>文字大小</view>
+<view class='color'>
+  <view class='very_small' bindtap='change' data-size='18'>很小</view>
+  <view class='small' bindtap='change' data-size='20'>小</view>
+  <view class='normal' bindtap='change' data-size='25'>一般</view>
+  <view class='big' bindtap='change' data-size='30'>大</view>
+  <view class='very_big' bindtap='change' data-size='40'>很大</view>
+</view>
+<button bindtap='generate' class='btn'>生成表情，发送给好友</button>
+</view>
