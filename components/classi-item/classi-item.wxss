@@ -3,7 +3,7 @@
 .item-main {
   width: 150rpx;
   height: 200rpx;
-  background: blue;
+  background: white;
 }
 
 .item-cover {

@@ -1,8 +1,13 @@
 @import "../../common/common.wxss";
 
+page {
+  background: #e2e2e2;
+}
+
 .classi-area {
   width: 100%;
   flex-wrap: wrap;
+  padding-bottom: 25rpx;
 }
 
 .classi-item {

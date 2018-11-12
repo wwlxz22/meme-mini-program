@@ -1,5 +1,7 @@
-<view class='classi-area flex-row items-center '>
-  <block wx:for="{{classificationList}}" wx:for-item="item" wx:key="key">
-    <classi-item class="classi-item" cid="{{item.id}}" cover="{{item.cover}}" title="{{item.name}}">{{item.name}}</classi-item>
-  </block>
-</view>
+<scroll-view>
+  <view class='classi-area flex-row items-center '>
+    <block wx:for="{{classificationList}}" wx:for-item="item" wx:key="key">
+      <classi-item class="classi-item" cid="{{item.id}}" cover="{{item.cover}}" title="{{item.name}}">{{item.name}}</classi-item>
+    </block>
+  </view>
+</scroll-view>
