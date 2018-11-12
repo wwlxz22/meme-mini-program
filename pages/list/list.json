@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "分类",
+  "usingComponents": {
+    "face-item": "/components/face-item/face-item"
+  }
+}

@@ -26,7 +26,7 @@ Component({
     _navigateToList: function() {
       let that = this;
       wx.navigateTo({
-        url: '/pages/list/list?id=' + that.properties.cid,
+        url: '/pages/list/list?id=' + that.properties.cid + "&category=" + that.properties.title,
       });
     }
   }

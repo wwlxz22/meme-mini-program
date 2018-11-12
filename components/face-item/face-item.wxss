@@ -1,1 +1,4 @@
-/* components/face-item/face-item.wxss */
+.face-item {
+  width: 230rpx;
+  height: 230rpx;
+}

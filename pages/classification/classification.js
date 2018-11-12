@@ -15,10 +15,10 @@ Page({
   onLoad: function(options) {
     let that = this;
     // 获取分类列表
-    apiFuncs.getClassificationList().then(res => {
+    apiFuncs.getCategoryList().then(res => {
       that.setData({
         classificationList: res
-      })
+      });
     });
   },
 
