@@ -4,7 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    image: String
+    raw: String,
+    full: String
   },
 
   /**
@@ -18,8 +19,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    _navigateToEdit: function() {
-
+    _navigateToShare: function() {
+      let that = this;
+      wx.navigateTo({
+        url: '/pages/share/share?raw=' + that.properties.raw + "&src=" + that.properties.full
+      });
     }
   }
 })

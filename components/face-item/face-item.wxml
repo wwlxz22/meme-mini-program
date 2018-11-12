@@ -1,1 +1,1 @@
-<image class="face-item" src="{{image}}" />
+<image class="face-item" src="{{full}}" bindtap="_navigateToShare" />

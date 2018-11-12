@@ -65,6 +65,8 @@ Page({
   },
   jumpToShare: function(e) {
     let [that, raw, src] = [this, e.currentTarget.dataset.raw, e.currentTarget.dataset.src];
+    console.info(" raw = ", raw);
+    console.info(" src = ", src);
     wx.navigateTo({
       url: '/pages/share/share?src=' + src + '&raw=' + raw,
     })
@@ -97,7 +99,7 @@ Page({
     })
 
   },
-  onShareAppMessage(){
-    
+  onShareAppMessage() {
+
   }
 })
