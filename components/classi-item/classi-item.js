@@ -5,7 +5,8 @@ Component({
    */
   properties: {
     cover: String,
-    title: String
+    title: String,
+    cid: Number
   },
 
   /**
@@ -19,6 +20,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    /**
+     * 跳转到图片列表页
+     */
+    _navigateToList: function() {
+      let that = this;
+      wx.navigateTo({
+        url: '/pages/list/list?id=' + that.properties.cid,
+      });
+    }
   }
 })

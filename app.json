@@ -5,7 +5,8 @@
     "pages/edit/edit",
     "pages/search/search",
     "pages/classification/classification",
-    "pages/favorites/favorites"
+    "pages/favorites/favorites",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
