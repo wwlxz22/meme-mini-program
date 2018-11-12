@@ -1,1 +1,11 @@
-/* pages/classification/classification.wxss */
+@import "../../common/common.wxss";
+
+.classi-area {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.classi-item {
+  margin-left: 25rpx;
+  margin-top: 30rpx;
+}

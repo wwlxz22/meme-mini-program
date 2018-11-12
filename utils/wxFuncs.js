@@ -7,7 +7,7 @@ const request = (url, data = {}, method = "GET") => {
       success: res => {
         if (200 == res.statusCode) {
           if (200 == res.data.code) {
-            resolve()
+            resolve(res.data.data);
           }
         } else {
           reject(res);
@@ -18,4 +18,8 @@ const request = (url, data = {}, method = "GET") => {
       }
     })
   });
+}
+
+module.exports = {
+  request: request
 }

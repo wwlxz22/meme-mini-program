@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "classi-item": "/components/classi-item/classi-item"
+  }
+}

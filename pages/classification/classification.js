@@ -13,9 +13,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let that = this;
     // 获取分类列表
-    apiFuncs.getCLassificationList().then(res => {
-
+    apiFuncs.getClassificationList().then(res => {
+      that.setData({
+        classificationList: res
+      })
     });
   },
 

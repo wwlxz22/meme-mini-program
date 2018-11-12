@@ -1,9 +1,15 @@
 @import "../../common/common.wxss";
 
 .item-main {
+  width: 150rpx;
+  height: 200rpx;
+  background: blue;
 }
 
 .item-cover {
+  width: 150rpx;
+  height: 150rpx;
+  background: yellow;
 }
 
 .item-title {
