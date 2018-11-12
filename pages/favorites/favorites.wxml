@@ -1,2 +1,9 @@
-<!--pages/favorites/favorites.wxml-->
-<text>pages/favorites/favorites.wxml</text>
+<view class='favori-info flex-row items-center'>
+  <view class="favori-avatar-wrap">
+    <open-data class="favori-avatar" type="userAvatarUrl" />
+  </view>
+  <open-data type="userNickName" />
+</view>
+<view>
+
+</view>
