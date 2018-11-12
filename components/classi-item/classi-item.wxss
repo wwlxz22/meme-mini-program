@@ -1,0 +1,10 @@
+@import "../../common/common.wxss";
+
+.item-main {
+}
+
+.item-cover {
+}
+
+.item-title {
+}

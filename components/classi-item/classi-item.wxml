@@ -1,0 +1,4 @@
+<view class="item-main">
+  <image class="item-cover" src='{{cover}}' />
+  <text class="item-title ">{{title}}</text>
+</view>
