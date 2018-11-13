@@ -17,7 +17,7 @@ Page({
     // 获取分类列表
     apiFuncs.getCategoryList().then(res => {
       that.setData({
-        categoryList: res
+        categoryList: res.data
       });
     });
   },
