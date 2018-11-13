@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classificationList: [], // 分类列表
+    categoryList: [], // 分类列表
   },
 
   /**
@@ -17,7 +17,7 @@ Page({
     // 获取分类列表
     apiFuncs.getCategoryList().then(res => {
       that.setData({
-        classificationList: res
+        categoryList: res
       });
     });
   },

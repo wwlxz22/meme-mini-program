@@ -13,8 +13,8 @@ const getCategoryList = () => {
  */
 const getFaceListByCategory = (categoryId, pageNo = 1) => {
   let data = {
-    cate_id: categoryId,
-    start: pageNo
+    category_id: categoryId,
+    pageNo: pageNo
   }
   return wxFuncs.request(api.FACES_BY_CATEGORY, data);
 }
