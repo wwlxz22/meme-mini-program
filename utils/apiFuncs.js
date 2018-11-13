@@ -19,6 +19,13 @@ const getFaceListByCategory = (categoryId, pageNo = 1) => {
   return wxFuncs.request(api.FACES_BY_CATEGORY, data);
 }
 
+const getFaceById = (faceId) => {
+  let data = {
+    face_id: faceId
+  }
+  return wxFuncs.request(api.FACE_BY_ID, data);
+}
+
 /**
  * 添加收藏
  */
