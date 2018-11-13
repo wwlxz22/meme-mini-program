@@ -4,13 +4,13 @@ page {
   background: #e2e2e2;
 }
 
-.classi-area {
+.category-area {
   width: 100%;
   flex-wrap: wrap;
   padding-bottom: 25rpx;
 }
 
-.classi-item {
+.category-item {
   margin-left: 25rpx;
   margin-top: 30rpx;
 }

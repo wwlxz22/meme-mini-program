@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "分类",
   "usingComponents": {
-    "classi-item": "/components/classi-item/classi-item"
+    "category-item": "/components/category-item/category-item"
   }
 }
