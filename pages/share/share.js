@@ -1,4 +1,6 @@
 // pages/share/share.js
+const apiFuncs = require("../../utils/apiFuncs.js");
+
 Page({
 
   /**
@@ -7,6 +9,17 @@ Page({
   data: {
     src: '',
     raw: '',
+    faceId: '', // 表情id
+  },
+
+  /**
+   * 添加或取消收藏
+   */
+  addFavorite: function() {
+    let that = this;
+    apiFuncs.addFavorite(that.data.faceId, that.data.favorited ? 0 : 1).then(res => {
+
+    });
   },
 
   /**
@@ -15,7 +28,7 @@ Page({
   onLoad: function(options) {
     this.setData({
       src: options.src,
-      raw: options.raw
+      raw: options.raw,
     });
   },
 
@@ -75,12 +88,12 @@ Page({
     })
   },
   edit: function() {
-    let that=this;
+    let that = this;
     wx.navigateTo({
       url: '/pages/edit/edit?raw=' + that.data.raw,
     })
   },
-  pay:function(){
+  pay: function() {
     wx.requestPayment({
       timeStamp: '',
       nonceStr: '',
@@ -90,8 +103,8 @@ Page({
       success(res) {
         console.log('成功了');
         console.log(res);
-       },
-      fail(res) { 
+      },
+      fail(res) {
         console.log('失败了');
         console.log(res);
       }

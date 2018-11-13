@@ -4,9 +4,10 @@
     "pages/share/share",
     "pages/edit/edit",
     "pages/search/search",
-    "pages/classification/classification",
-    "pages/favorites/favorites",
-    "pages/list/list"
+    "pages/category/category",
+    "pages/list/list",
+    "pages/mine/index/index",
+    "pages/mine/favorites/favorites"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,12 +22,12 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/classification/classification",
+        "pagePath": "pages/category/category",
         "text": "分类"
       },
       {
-        "pagePath": "pages/favorites/favorites",
-        "text": "收藏"
+        "pagePath": "pages/mine/index/index",
+        "text": "我"
       }
     ]
   }

@@ -1,8 +1,14 @@
 <!--pages/share/share.wxml-->
 <view>
   <image src='{{src}}' class='image' mode='widthFix'></image>
-  <button bindtap='edit' class='btn'>自定义表情文字</button>
-  <button bindtap='battle' class='btn'>直接发送，与好友斗图</button>
+  <view class='flex-row items-center' style='width: 750rpx; height: 120rpx; justify-content: space-around; margin-bottom: 30rpx;'>
+    <view class="flex-row items-center justify-center" style='width: 80rpx; height: 80rpx; background-color: #ffb36c; border-radius: 10px;' bindtap='addFavorite'>
+      <image style='width: 60rpx; height: 60rpx;' src='/images/favorite.png' />
+    </view>
+    <view bindtap='edit' class='flex-row items-center btn'>自定义表情文字</view>
+    <view bindtap='battle' class='flex-row items-center btn'>直接发送，与好友斗图</view>
+    <!-- <button bindtap='favorite' class='btn'>添加收藏</button> -->
+  </view>
 </view>
-<button bindtap='pay'>支付</button>
-<ad unit-id="adunit-c00ee437f3e39ec8"></ad>
+<!-- <button bindtap='pay'>支付</button> -->
+<ad style="position: fixed; bottom: 0; left: 0;" unit-id="adunit-c00ee437f3e39ec8"></ad>

@@ -1,31 +1,32 @@
 /* pages/share/share.wxss */
-page{
+@import "../../common/common.wxss";
+
+page {
   background: #eee;
 }
-.image{
+
+.image {
   width: 700rpx;
   height: 600rpx;
   margin: 20rpx 25rpx;
 }
+
 .btn {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin-left: 75rpx;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #ffb36c;
   height: 80rpx;
-  width: 600rpx;
+  width: 300rpx;
   align-self: center;
   font-size: 28rpx;
   color: #fff;
-  margin-bottom: 30rpx;
 }
 
 .btn::after {
   border: none;
 }
-.txt{
+
+.txt {
   align-self: center;
   font-size: 26rpx;
   color: #555;
