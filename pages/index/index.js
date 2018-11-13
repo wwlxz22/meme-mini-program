@@ -10,7 +10,21 @@ Page({
     cate_id: 1,
     height: 0,
     pageNo: 1,
+    currentType: "newest"
   },
+
+  /** 
+   * 修改分类
+   */
+  changeType: function(e) {
+    console.info(" [ index.js ] ============= changeType >>>>> e = ", e);
+    let that = this,
+      data = e.currentTarget.dataset;
+    that.setData({
+      currentType: data.type
+    });
+  },
+
   changeCate: function(e) {
     let that = this;
     //console.log(e);

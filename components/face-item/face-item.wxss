@@ -1,4 +1,4 @@
 .face-item {
-  width: 230rpx;
-  height: 230rpx;
+  width: 220rpx;
+  height: 220rpx;
 }

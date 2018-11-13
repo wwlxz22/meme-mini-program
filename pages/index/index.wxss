@@ -1,35 +1,40 @@
-.lists_view{
+@import "../../common/common.wxss";
+
+.lists_view {
   width: 750rpx;
   white-space: nowrap;
   background: #fff;
 }
-.lists{
+
+.lists {
   display: flex;
   flex-direction: row;
 }
-.item{
+
+.item {
   color: #555;
   padding: 5px 15px;
   font-size: 14px;
 }
-.active{
-  color:red;
-  border-bottom:2px solid red
+
+.active {
+  color: red;
+  border-bottom: 2px solid red;
 }
-.images_view{
+
+.images_view {
   width: 750rpx;
   background: #eee;
   margin-top: 80px;
 }
-.image{
+
+.image {
   margin: 10rpx 10rpx;
   width: 230rpx;
   height: 230rpx;
 }
+
 /* pages/canEat/canEat.wxss */
-
-
-
 
 .weui-search-bar {
   position: relative;

@@ -1,5 +1,5 @@
-<!-- 搜索 -->
 <view class='top'>
+  <!-- 搜索 -->
   <view class="weui-search-bar">
     <view class="weui-search-bar__form">
       <view class="weui-search-bar__box">
@@ -8,16 +8,13 @@
       </view>
     </view>
   </view>
-  <scroll-view scroll-x class='lists_view'>
-    <view class='lists'>
-      <block wx:for='{{lists}}' wx:key="index">
-        <view class="item {{item.id==cate_id?'active':''}}" bindtap='changeCate' data-id='{{item.id}}'>{{item.name}}</view>
-      </block>
-    </view>
-  </scroll-view>
+  <!-- 最新/最热 -->
+  <view class="flex-row" style='justify-content: space-around'>
+    <view class="item {{currentType == 'newest' ? 'active':''}}" bindtap='changeType' data-type='newest'>最新</view>
+    <view class="item {{currentType == 'hot' ? 'active':''}}" bindtap='changeType' data-type='hot'>最热</view>
+  </view>
 </view>
-<!-- 列表 -->
-
+<!-- 表情列表 -->
 <scroll-view scroll-y class='images_view' style='height:{{height}}px;' enable-back-to-top bindscrolltolower="getmore">
   <view>
     <block wx:for="{{images}}" wx:key="index">

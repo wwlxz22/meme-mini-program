@@ -1,1 +1,13 @@
-/* pages/list/list.wxss */
+page {
+  background: #e2e2e2;
+}
+
+.face-item {
+  margin-left: 20rpx;
+  /* margin-top: 20rpx; */
+}
+
+.list-area {
+  padding-left: 5rp;
+  padding-top: 25rpx;
+}

@@ -13,4 +13,9 @@
 }
 
 .item-title {
+  width: 100%;
+  flex: 1;
+  font-family: PingFangSC-Semibold;
+  font-size: 30rpx;
+  color: #1e1e1e;
 }

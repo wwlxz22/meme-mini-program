@@ -1,4 +1,4 @@
 <view class="item-main flex-column items-center" bindtap="_navigateToList">
   <image class="item-cover" src='{{cover}}' />
-  <text class="item-title">{{title}}</text>
+  <text class="item-title flex-row items-center justify-center">{{title}}</text>
 </view>
