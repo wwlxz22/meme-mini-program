@@ -23,7 +23,7 @@ Page({
     });
     apiFuncs.getFaceListByCategory(id, that.data.pageNo).then(res => {
       that.setData({
-        faceList: res
+        faceList: res.data
       });
     });
   },
