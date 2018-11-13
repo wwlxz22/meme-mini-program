@@ -1,8 +1,15 @@
-<view class='favori-info flex-row items-center'>
-  <view class="favori-avatar-wrap">
-    <open-data class="favori-avatar" type="userAvatarUrl" />
+<view class='info-area flex-column items-center justify-center'>
+  <view class="avatar-wrap">
+    <open-data class="avatar" type="userAvatarUrl" />
   </view>
-  <open-data type="userNickName" />
+  <open-data class="nickname" type="userNickName" />
 </view>
-<view>
+<view class="function-area flex-column">
+  <view class="flex-row items-center" style="width: 750rpx; height: 100rpx;" bindtap="navigateToFavorite">
+    <image style="width: 80rpx; height: 80rpx; background: yellow;" />
+    <view class='flex-row items-center ' style="justify-content: space-between; flex: 1;">
+      <text>我的收藏 </text>
+      <image style="width: 80rpx; height: 80rpx; background: blue;" />
+    </view>
+  </view>
 </view>
