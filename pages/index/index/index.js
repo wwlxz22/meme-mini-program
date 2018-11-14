@@ -2,7 +2,7 @@
 //获取应用实例
 let url = "https://www.xiaochongleyuan.com/api";
 const app = getApp();
-const apiFuncs = require("../../utils/apiFuncs.js");
+const apiFuncs = require("../../../utils/apiFuncs.js");
 
 Page({
   data: {
@@ -102,7 +102,7 @@ Page({
     console.info(" raw = ", raw);
     console.info(" src = ", src);
     wx.navigateTo({
-      url: '/pages/share/share?src=' + src + '&raw=' + raw,
+      url: '/pages/subpage/share/share?src=' + src + '&raw=' + raw,
     })
   },
   getmore: function() {

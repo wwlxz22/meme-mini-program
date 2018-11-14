@@ -22,7 +22,7 @@ Component({
     _navigateToShare: function() {
       let that = this;
       wx.navigateTo({
-        url: '/pages/share/share?raw=' + that.properties.raw + "&src=" + that.properties.full
+        url: '/pages/subpage/share/share?raw=' + that.properties.raw + "&src=" + that.properties.full
       });
     }
   }

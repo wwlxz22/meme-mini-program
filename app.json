@@ -1,13 +1,12 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/share/share",
-    "pages/edit/edit",
-    "pages/search/search",
+    "pages/index/index/index",
     "pages/category/category",
-    "pages/list/list",
     "pages/mine/index/index",
-    "pages/mine/favorites/favorites"
+    "pages/mine/favorites/favorites",
+    "pages/subpage/list/list",
+    "pages/subpage/share/share",
+    "pages/subpage/edit/edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,7 +17,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/index/index/index",
         "text": "首页"
       },
       {

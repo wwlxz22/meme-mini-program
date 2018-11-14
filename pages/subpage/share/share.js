@@ -1,5 +1,5 @@
 // pages/share/share.js
-const apiFuncs = require("../../utils/apiFuncs.js");
+const apiFuncs = require("../../../utils/apiFuncs.js");
 
 Page({
 
@@ -90,7 +90,7 @@ Page({
   edit: function() {
     let that = this;
     wx.navigateTo({
-      url: '/pages/edit/edit?raw=' + that.data.raw,
+      url: '/pages/subpage/edit/edit?raw=' + that.data.raw,
     })
   },
   pay: function() {

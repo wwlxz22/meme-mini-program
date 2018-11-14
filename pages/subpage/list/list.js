@@ -1,4 +1,4 @@
-const apiFuncs = require("../../utils/apiFuncs.js");
+const apiFuncs = require("../../../utils/apiFuncs.js");
 
 Page({
 
