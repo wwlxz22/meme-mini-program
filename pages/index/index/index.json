@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "表情包斗图-骁彰科技"
+  "navigationBarTitleText": "表情包斗图-骁彰科技",
+  "usingComponents": {
+    "face-item": "/components/face-item/face-item"
+  }
 }

@@ -11,7 +11,8 @@ Page({
     cate_id: 1,
     height: 0,
     pageNo: 1,
-    currentType: "newest"
+    currentType: "newest",
+    faceList: [],
   },
 
   /**
@@ -32,6 +33,37 @@ Page({
     });
   },
 
+  /**
+   * 加载更多
+   */
+  loadMore: function(e) {
+    let that = this;
+    that.getFaceList(that.data.currentType, that.data.pageNo);
+  },
+
+  /**
+   * 加载表情数据
+   */
+  getFaceList(type, pageNo = 1) {
+    let that = this;
+    apiFuncs.getStarFaces(type, pageNo).then(res => {
+      if (res.code != 2000) {
+        return;
+      }
+      if (res.data.length > 0) {
+        let newList = that.data.faceList.concat(res.data);
+        that.setData({
+          faceList: newList,
+          pageNo: pageNo + 1
+        });
+      } else {
+        that.setData({
+          pageNo: pageNo
+        });
+      }
+    });
+  },
+
   /** 
    * 修改分类
    */
@@ -42,34 +74,9 @@ Page({
     that.setData({
       currentType: data.type
     });
+    that.getFaceList(data.type, 1);
   },
 
-  changeCate: function(e) {
-    let that = this;
-    //console.log(e);
-    let cate_id = e.currentTarget.dataset.id;
-    that.setData({
-      cate_id: cate_id
-    });
-    wx.showLoading({
-      title: '数据加载中',
-      mask: true,
-    })
-    wx.request({
-      url: url + '/bqb/images',
-      data: {
-        cate_id: cate_id
-      },
-      success(res) {
-        that.setData({
-          images: res.data.data
-        });
-      },
-      complete() {
-        wx.hideLoading();
-      }
-    })
-  },
   onLoad: function() {
     let that = this;
     wx.getSystemInfo({
@@ -78,23 +85,8 @@ Page({
           height: res.windowHeight - 80
         })
       },
-    })
-    wx.request({
-      url: url + '/bqb/lists',
-      success(res) {
-        that.setData({
-          lists: res.data.data
-        });
-      }
-    })
-    wx.request({
-      url: url + '/bqb/images?cate_id=' + that.data.cate_id + "&start=" + that.data.pageNo,
-      success(res) {
-        that.setData({
-          images: res.data.data
-        });
-      }
-    })
+    });
+    that.getFaceList("newest", 1);
   },
 
   /**

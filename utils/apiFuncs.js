@@ -72,10 +72,22 @@ const search = (key, pageNo = 1) => {
   return wxFuncs.request(api.SEARCH, data);
 }
 
+/**
+ * 获取明星表情
+ */
+const getStarFaces = (type, pageNo = 1) => {
+  let data = {
+    type: type,
+    pageNo: pageNo
+  }
+  return wxFuncs.request(api.STAR_FACES, data);
+}
+
 module.exports = {
   login: login,
   getCategoryList: getCategoryList,
   getFaceListByCategory: getFaceListByCategory,
   addFavorite: addFavorite,
-  search: search
+  search: search,
+  getStarFaces: getStarFaces
 }

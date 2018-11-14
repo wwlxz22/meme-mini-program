@@ -8,4 +8,5 @@ module.exports = {
   FACES_BY_CATEGORY: BASE_URL + `/face/category`, // 分类获取表情
   SEARCH: BASE_URL + `/face/search`, // 搜索
   ADD_FAVORITE: BASE_URL + `/favorite/add`, // 收藏
+  STAR_FACES: BASE_URL + `/face/star`, // 明星头像
 }
