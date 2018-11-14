@@ -1,3 +1,4 @@
+<loading wx:if="{{showLoading}}">加载中</loading>
 <view class='top'>
   <!-- 搜索 -->
   <view class="weui-search-bar">

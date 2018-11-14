@@ -13,6 +13,7 @@ Page({
     pageNo: 1,
     currentType: "newest",
     faceList: [],
+    showLoading: false
   },
 
   /**
@@ -46,7 +47,13 @@ Page({
    */
   getFaceList(type, pageNo = 1) {
     let that = this;
+    that.setData({
+      showLoading: true
+    });
     apiFuncs.getStarFaces(type, pageNo).then(res => {
+      that.setData({
+        showLoading: false
+      });
       if (res.code != 2000) {
         return;
       }
