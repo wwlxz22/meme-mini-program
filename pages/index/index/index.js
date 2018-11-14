@@ -51,15 +51,27 @@ Page({
         return;
       }
       if (res.data.length > 0) {
-        let newList = that.data.faceList.concat(res.data);
+        let newList = [];
+        if (pageNo == 1) {
+          newList = res.data;
+        } else {
+          newList = that.data.faceList.concat(res.data);
+        }
         that.setData({
           faceList: newList,
           pageNo: pageNo + 1
         });
       } else {
-        that.setData({
-          pageNo: pageNo
-        });
+        if (pageNo == 1) {
+          that.setData({
+            faceList: [],
+            pageNo: pageNo
+          })
+        } else {
+          that.setData({
+            pageNo: pageNo
+          });
+        }
       }
     });
   },
