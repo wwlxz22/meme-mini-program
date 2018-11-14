@@ -26,6 +26,9 @@ const getFaceListByCategory = (categoryId, pageNo = 1) => {
   return wxFuncs.request(api.FACES_BY_CATEGORY, data);
 }
 
+/**
+ * 根据表情id获取表情
+ */
 const getFaceById = (faceId) => {
   let data = {
     face_id: faceId
@@ -54,9 +57,20 @@ const getFavoriteList = (pageNo = 1) => {
   return wxFuncs.request(api.FAVORITE_LIST, data);
 }
 
+/**
+ * 搜索
+ */
+const search = (key) => {
+  let data = {
+    key: key
+  }
+  return wxFuncs.request(api.SEARCH, data);
+}
+
 module.exports = {
   login: login,
   getCategoryList: getCategoryList,
   getFaceListByCategory: getFaceListByCategory,
-  addFavorite: addFavorite
+  addFavorite: addFavorite,
+  search: search
 }

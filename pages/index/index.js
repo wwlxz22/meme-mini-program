@@ -1,7 +1,8 @@
 //index.js
 //获取应用实例
 let url = "https://www.xiaochongleyuan.com/api";
-const app = getApp()
+const app = getApp();
+const apiFuncs = require("../../utils/apiFuncs.js");
 
 Page({
   data: {
@@ -11,6 +12,25 @@ Page({
     height: 0,
     pageNo: 1,
     currentType: "newest"
+  },
+
+  /**
+   * 搜索
+   */
+  search: function(e) {
+    console.info(" [ index.js ] ================= search >>>>>> e = ", e);
+    let that = this,
+      data = e.detail.value;
+    if (!data) {
+      wx.showToast({
+        title: '请输入要搜索的内容',
+        icon: "none"
+      });
+      return;
+    }
+    apiFuncs.search(data).then(res => {
+      console.info(" [ index.js ] ============== search >>>>> = res = ", res);
+    });
   },
 
   /** 
