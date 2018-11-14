@@ -96,6 +96,7 @@ Page({
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面显示
    */
@@ -105,12 +106,13 @@ Page({
       initKey: ""
     })
   },
+
   jumpToShare: function(e) {
-    let [that, raw, src] = [this, e.currentTarget.dataset.raw, e.currentTarget.dataset.src];
+    let [that, raw, src, faceId] = [this, e.currentTarget.dataset.raw, e.currentTarget.dataset.src, e.currentTarget.dataset.faceid];
     console.info(" raw = ", raw);
     console.info(" src = ", src);
     wx.navigateTo({
-      url: '/pages/subpage/share/share?src=' + src + '&raw=' + raw,
+      url: '/pages/subpage/share/share?src=' + src + '&raw=' + raw + "$faceId=" + faceId,
     })
   },
   getmore: function() {

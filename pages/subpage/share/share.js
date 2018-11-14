@@ -10,15 +10,25 @@ Page({
     src: '',
     raw: '',
     faceId: '', // 表情id
+    favorited: 0
   },
 
   /**
    * 添加或取消收藏
    */
   addFavorite: function() {
-    let that = this;
-    apiFuncs.addFavorite(that.data.faceId, that.data.favorited ? 0 : 1).then(res => {
-
+    let that = this,
+      add = that.data.favorited == 1 ? "remove" : "add";
+    apiFuncs.addFavorite(that.data.faceId, add).then(res => {
+      let favorited = 0;
+      if (res.code == 2000) {
+        favorited = that.data.favorited == 1 ? 0 : 1;
+      } else if (res.code == 4003) {
+        favorited = 1;
+      }
+      that.setData({
+        favorited: favorited
+      });
     });
   },
 
@@ -29,6 +39,7 @@ Page({
     this.setData({
       src: options.src,
       raw: options.raw,
+      faceId: options.faceId
     });
   },
 

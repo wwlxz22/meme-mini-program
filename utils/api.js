@@ -7,4 +7,5 @@ module.exports = {
   CATEGORY_LIST: BASE_URL + `/category/list`, // 分类列表
   FACES_BY_CATEGORY: BASE_URL + `/face/category`, // 分类获取表情
   SEARCH: BASE_URL + `/face/search`, // 搜索
+  ADD_FAVORITE: BASE_URL + `/favorite/add`, // 收藏
 }

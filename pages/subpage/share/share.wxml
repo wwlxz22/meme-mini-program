@@ -3,11 +3,11 @@
   <image src='{{src}}' class='image' mode='widthFix'></image>
   <view class='flex-row items-center' style='width: 750rpx; height: 120rpx; justify-content: space-around; margin-bottom: 30rpx;'>
     <view class="flex-row items-center justify-center" style='width: 80rpx; height: 80rpx; background-color: #ffb36c; border-radius: 10px;' bindtap='addFavorite'>
-      <image style='width: 60rpx; height: 60rpx;' src='/images/favorite.png' />
+      <image style='width: 60rpx; height: 60rpx;' src='/images/favorite.png' wx:if="{{favorited == 0}}" />
+      <image style='width: 60rpx; height: 60rpx;' src='/images/favorited.png' wx:else/>
     </view>
     <view bindtap='edit' class='flex-row items-center btn'>自定义表情文字</view>
     <view bindtap='battle' class='flex-row items-center btn'>直接发送，与好友斗图</view>
-    <!-- <button bindtap='favorite' class='btn'>添加收藏</button> -->
   </view>
 </view>
 <!-- <button bindtap='pay'>支付</button> -->

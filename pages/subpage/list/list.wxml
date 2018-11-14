@@ -1,5 +1,5 @@
 <view class='list-area flex-row items-center'>
   <block wx:for="{{faceList}}" wx:for-item="item" wx:key="key">
-    <face-item class="face-item" raw="{{item.raw_image}}" full="{{item.full_image}}" />
+    <face-item class="face-item" raw="{{item.raw_image}}" full="{{item.full_image}}" faceid="{{item.face_id}}"/>
   </block>
 </view>

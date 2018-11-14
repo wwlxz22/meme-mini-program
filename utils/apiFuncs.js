@@ -39,10 +39,14 @@ const getFaceById = (faceId) => {
 /**
  * 添加收藏
  */
-const addFavorite = (faceId, is_add) => {
+const addFavorite = (faceId, type) => {
+  let userId = wx.getStorageSync("userId"),
+    token = wx.getStorageSync("token");
   let data = {
+    user_id: userId,
+    token: token,
     face_id: faceId,
-    is_add: is_add
+    type: type
   }
   return wxFuncs.request(api.ADD_FAVORITE, data, "POST");
 }

@@ -11,6 +11,14 @@ App({
     wxFuncs.login().then(res => {
       apiFuncs.login(res.code).then(res => {
         console.info(" [ app.js ] =============== login >>>>> res = ", res);
+        wx.setStorage({
+          key: 'userId',
+          data: res.data.user_id
+        });
+        wx.setStorage({
+          key: 'token',
+          data: res.data.token
+        })
       });
     });
   },

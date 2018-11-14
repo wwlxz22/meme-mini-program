@@ -5,7 +5,8 @@ Component({
    */
   properties: {
     raw: String,
-    full: String
+    full: String,
+    faceid: String
   },
 
   /**
@@ -22,7 +23,7 @@ Component({
     _navigateToShare: function() {
       let that = this;
       wx.navigateTo({
-        url: '/pages/subpage/share/share?raw=' + that.properties.raw + "&src=" + that.properties.full
+        url: '/pages/subpage/share/share?raw=' + that.properties.raw + "&src=" + that.properties.full + "&faceId=" + that.properties.faceid
       });
     }
   }
