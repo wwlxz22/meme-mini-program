@@ -15,17 +15,6 @@ page {
   margin-left: 20rpx;
 }
 
-.lists_view {
-  width: 750rpx;
-  white-space: nowrap;
-  background: #fff;
-}
-
-.lists {
-  display: flex;
-  flex-direction: row;
-}
-
 .item {
   color: #555;
   padding: 5px 15px;
@@ -35,18 +24,6 @@ page {
 .active {
   color: red;
   border-bottom: 2px solid red;
-}
-
-.images_view {
-  width: 750rpx;
-  background: #eee;
-  margin-top: 80px;
-}
-
-.image {
-  margin: 10rpx 10rpx;
-  width: 230rpx;
-  height: 230rpx;
 }
 
 /* pages/canEat/canEat.wxss */
