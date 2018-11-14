@@ -1,2 +1,17 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class='search-area'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" value="{{initKey}}" class="weui-search-bar__input" placeholder="搜索表情包" bindconfirm="search" confirm-type="search"></input>
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y class='list-area flex-row items-center' style='height:{{height}}px;' enable-back-to-top bindscrolltolower="loadMore">
+  <view>
+    <block wx:for="{{faceList}}" wx:for-item="item" wx:key="key">
+      <face-item class="face-item" raw="{{item.raw_image}}" full="{{item.full_image}}" />
+    </block>
+  </view>
+</scroll-view>

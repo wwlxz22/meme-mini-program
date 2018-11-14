@@ -60,9 +60,10 @@ const getFavoriteList = (pageNo = 1) => {
 /**
  * 搜索
  */
-const search = (key) => {
+const search = (key, pageNo = 1) => {
   let data = {
-    key: key
+    key: key,
+    pageNo: pageNo
   }
   return wxFuncs.request(api.SEARCH, data);
 }

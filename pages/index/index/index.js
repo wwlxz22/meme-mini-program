@@ -19,8 +19,7 @@ Page({
    */
   search: function(e) {
     console.info(" [ index.js ] ================= search >>>>>> e = ", e);
-    let that = this,
-      data = e.detail.value;
+    let data = e.detail.value;
     if (!data) {
       wx.showToast({
         title: '请输入要搜索的内容',
@@ -28,8 +27,8 @@ Page({
       });
       return;
     }
-    apiFuncs.search(data).then(res => {
-      console.info(" [ index.js ] ============== search >>>>> = res = ", res);
+    wx.navigateTo({
+      url: '/pages/index/search/search?key=' + data,
     });
   },
 
