@@ -1,6 +1,13 @@
 const api = require("../utils/api.js");
 const wxFuncs = require("../utils/wxFuncs.js");
 
+const login = (code) => {
+  let data = {
+    code: code
+  }
+  return wxFuncs.request(api.LOGIN, data, "POST");
+}
+
 /**
  * 获取分类列表
  */
@@ -48,6 +55,7 @@ const getFavoriteList = (pageNo = 1) => {
 }
 
 module.exports = {
+  login: login,
   getCategoryList: getCategoryList,
   getFaceListByCategory: getFaceListByCategory,
   addFavorite: addFavorite

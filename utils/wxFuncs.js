@@ -22,17 +22,19 @@ const request = (url, data = {}, method = "GET") => {
  * 微信登陆接口
  */
 const login = () => {
-  wx.login({
-    success: res => {
-      if (res.code) {
-        resolve(res.code);
-      } else {
-        reject(res)
+  return new Promise((resolve, reject) => {
+    wx.login({
+      success: res => {
+        if (res.code) {
+          resolve(res);
+        } else {
+          reject(res)
+        }
+      },
+      fail: rej => {
+        reject(rej);
       }
-    },
-    fail: rej => {
-      reject(rej);
-    }
+    });
   });
 }
 
