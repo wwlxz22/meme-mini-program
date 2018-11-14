@@ -96,6 +96,15 @@ Page({
       }
     })
   },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function() {
+    let that = this;
+    that.setData({
+      initKey: ""
+    })
+  },
   jumpToShare: function(e) {
     let [that, raw, src] = [this, e.currentTarget.dataset.raw, e.currentTarget.dataset.src];
     console.info(" raw = ", raw);

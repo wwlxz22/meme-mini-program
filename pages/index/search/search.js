@@ -45,8 +45,6 @@ Page({
     let that = this;
     apiFuncs.search(key, pageNo).then(res => {
       console.info(" [ index.js ] ============== search >>>>> = res = ", res);
-      // length == 0 , pageNo == 1
-      // length == 0 , pageNo != 1
       if (res.data.length > 0) {
         let newList = [];
         if (pageNo == 1) {
