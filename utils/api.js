@@ -9,4 +9,5 @@ module.exports = {
   SEARCH: BASE_URL + `/face/search`, // 搜索
   ADD_FAVORITE: BASE_URL + `/favorite/add`, // 收藏
   STAR_FACES: BASE_URL + `/face/star`, // 明星头像
+  GET_FAVORITE: BASE_URL + `/favorite/get`, // 收藏列表
 }

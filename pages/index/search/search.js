@@ -85,7 +85,7 @@ Page({
           height: res.windowHeight - 80
         })
       },
-    })
+    });
     that.setData({
       initKey: key
     });

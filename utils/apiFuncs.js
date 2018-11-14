@@ -55,10 +55,14 @@ const addFavorite = (faceId, type) => {
  * 获取收藏列表
  */
 const getFavoriteList = (pageNo = 1) => {
+  let userId = wx.getStorageSync("userId"),
+    token = wx.getStorageSync("token");
   let data = {
+    user_id: userId,
+    token: token,
     pageNo: pageNo
   }
-  return wxFuncs.request(api.FAVORITE_LIST, data);
+  return wxFuncs.request(api.GET_FAVORITE, data);
 }
 
 /**
@@ -89,5 +93,6 @@ module.exports = {
   getFaceListByCategory: getFaceListByCategory,
   addFavorite: addFavorite,
   search: search,
-  getStarFaces: getStarFaces
+  getStarFaces: getStarFaces,
+  getFavoriteList: getFavoriteList
 }

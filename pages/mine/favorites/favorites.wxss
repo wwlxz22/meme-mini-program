@@ -4,24 +4,13 @@ page {
   background: #e2e2e2;
 }
 
-.favori-info {
-  width: 700rpx;
-  height: 150rpx;
-  margin: 25rpx;
-  background: white;
-  border-radius: 10rpx;
+.list-area {
+  margin-top: 45px;
+  padding-left: 5rp;
+  padding-top: 25rpx;
+  flex-wrap: wrap;
 }
 
-.favori-avatar-wrap {
-  width: 100rpx;
-  height: 100rpx;
-  margin-left: 25rpx;
-  margin-right: 25rpx;
-  border-radius: 50rpx;
-  overflow: hidden;
-}
-
-.favori-avatar {
-  width: 100rpx;
-  height: 100rpx;
+.face-item {
+  margin-left: 20rpx;
 }

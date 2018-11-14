@@ -1,18 +1,57 @@
-// pages/favorites/favorites.js
+const apiFuncs = require("../../../utils/apiFuncs.js");
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    favoriteList: [], // 收藏列表
+    faceList: [], // 收藏列表
+    pageNo: 1,
+    height: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let that = this;
+    // 获取屏幕高度
+    wx.getSystemInfo({
+      success: res => {
+        that.setData({
+          height: res.windowHeight
+        });
+      },
+    });
+    that.getFaceList(1);
+  },
 
+  /**
+   * 加载更多
+   */
+  loadMore: function(e) {
+    let that = this;
+    that.getFaceList(that.data.pageNo);
+  },
+
+  /**
+   * 获取表情
+   */
+  getFaceList: function(pageNo = 1) {
+    let that = this;
+    apiFuncs.getFavoriteList(pageNo).then(res => {
+      console.info(" [ favorites.js ] ================ getFaceList >>>>> res = ", res);
+      if (res.code != 2000) {
+        return;
+      }
+      if (res.data.length > 0) {
+        that.setData({
+          faceList: that.data.faceList.concat(res.data),
+          pageNo: pageNo + 1
+        });
+      }
+    });
   },
 
   /**
