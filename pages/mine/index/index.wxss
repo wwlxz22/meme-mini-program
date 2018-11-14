@@ -11,17 +11,15 @@ page {
 }
 
 .avatar-wrap {
-  width: 100rpx;
-  height: 100rpx;
-  margin-left: 25rpx;
-  margin-right: 25rpx;
-  border-radius: 50rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
   overflow: hidden;
 }
 
 .avatar {
-  width: 100rpx;
-  height: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
 }
 
 .nickname {
