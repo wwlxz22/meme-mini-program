@@ -9,11 +9,11 @@
 <view>
 <view class='title'>文字颜色</view>
 <view class='color'>
-  <view class='red' bindtap='changeColor' data-color='red'></view>
-  <view class='black' bindtap='changeColor' data-color='black'></view>
-  <view class='green' bindtap='changeColor' data-color='green'></view>
-  <view class='blue' bindtap='changeColor' data-color='blue'></view>
-  <view class='orange' bindtap='changeColor' data-color='orange'></view>
+  <view class='red' bindtap='changeColor' data-color='#FF0000'></view>
+  <view class='black' bindtap='changeColor' data-color='#000000'></view>
+  <view class='green' bindtap='changeColor' data-color='#00FF00'></view>
+  <view class='blue' bindtap='changeColor' data-color='#0000FF'></view>
+  <view class='orange' bindtap='changeColor' data-color='#FFA500'></view>
 </view>
 <view class='title'>文字大小</view>
 <view class='color'>

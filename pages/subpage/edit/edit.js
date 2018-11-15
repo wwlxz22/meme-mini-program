@@ -14,7 +14,7 @@ Page({
     windowWidth: 0,
     windowHeight: 0,
     size: 30,
-    color: 'black',
+    color: '#000000',
     value :'',
     path:'',
     display:'none'
@@ -135,7 +135,8 @@ Page({
     });
   },
   generate: function() {
-    
+    // let that = this;
+    let fontColor = this.data.color;
     if(!this.data.value){
       wx.showToast({
         title: '请输入文字',
@@ -151,7 +152,8 @@ Page({
     const ctx = wx.createCanvasContext('my');
     ctx.drawImage(that.data.path, 0, 0, that.data.picWidth, that.data.picHeight)
     //console.log(ctx);
-    ctx.setFontSize(that.data.size)
+    ctx.setFontSize(that.data.size);
+    ctx.setFillStyle(fontColor); // TODO 
     ctx.fillText(that.data.value, that.data.x, that.data.y + 30);
     ctx.draw(false, () => {
       wx.setStorageSync('has_gen', true)
