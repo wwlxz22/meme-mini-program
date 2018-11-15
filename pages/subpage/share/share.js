@@ -10,7 +10,7 @@ Page({
     src: '',
     raw: '',
     faceId: '', // 表情id
-    favorited: 0
+    isFavorite: 0
   },
 
   /**
@@ -18,16 +18,16 @@ Page({
    */
   addFavorite: function() {
     let that = this,
-      add = that.data.favorited == 1 ? "remove" : "add";
+      add = that.data.isFavorite == 1 ? "remove" : "add";
     apiFuncs.addFavorite(that.data.faceId, add).then(res => {
-      let favorited = 0;
+      let isFavorite = 0;
       if (res.code == 2000) {
-        favorited = that.data.favorited == 1 ? 0 : 1;
+        isFavorite = that.data.isFavorite == 1 ? 0 : 1;
       } else if (res.code == 4003) {
-        favorited = 1;
+        isFavorite = 1;
       }
       that.setData({
-        favorited: favorited
+        isFavorite: isFavorite
       });
     });
   },
@@ -36,10 +36,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.setData({
+    let that = this;
+    that.setData({
       src: options.src,
       raw: options.raw,
       faceId: options.faceId
+    });
+    // 判断是否收藏
+    apiFuncs.isFavorite(options.faceId).then(res => {
+      if (res.code == 2000) {
+        that.setData({
+          favorited: res.data.is_favorite
+        });
+      }
     });
   },
 

@@ -10,4 +10,5 @@ module.exports = {
   ADD_FAVORITE: BASE_URL + `/favorite/add`, // 收藏
   STAR_FACES: BASE_URL + `/face/star`, // 明星头像
   GET_FAVORITE: BASE_URL + `/favorite/get`, // 收藏列表
+  IS_FAVORITE: BASE_URL + `/favorite/status`, // 判断是否收藏
 }

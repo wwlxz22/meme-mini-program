@@ -87,6 +87,20 @@ const getStarFaces = (type, pageNo = 1) => {
   return wxFuncs.request(api.STAR_FACES, data);
 }
 
+/**
+ * 判断是否收藏
+ */
+const isFavorite = (faceId) => {
+  let userId = wx.getStorageSync("userId"),
+    token = wx.getStorageSync("token");
+  let data = {
+    user_id: userId,
+    token: token,
+    face_id: faceId
+  }
+  return wxFuncs.request(api.IS_FAVORITE, data);
+}
+
 module.exports = {
   login: login,
   getCategoryList: getCategoryList,
@@ -94,5 +108,6 @@ module.exports = {
   addFavorite: addFavorite,
   search: search,
   getStarFaces: getStarFaces,
-  getFavoriteList: getFavoriteList
+  getFavoriteList: getFavoriteList,
+  isFavorite: isFavorite
 }
