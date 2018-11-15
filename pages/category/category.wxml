@@ -4,4 +4,5 @@
       <category-item class="category-item" cid="{{item.category_id}}" cover="{{item.cover}}" title="{{item.name}}">{{item.name}}</category-item>
     </block>
   </view>
+  <ad style="bottom: 0; left: 0;" unit-id="adunit-c00ee437f3e39ec8"></ad>
 </scroll-view>
