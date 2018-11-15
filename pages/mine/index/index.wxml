@@ -1,4 +1,5 @@
 <view class='info-area flex-column items-center justify-center'>
+  <image class="info-area" style='position: absolute; top: 0; left: 0;' src='/images/info_bg.png' />
   <view class="avatar-wrap">
     <open-data class="avatar" type="userAvatarUrl" />
   </view>

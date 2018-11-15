@@ -46,7 +46,7 @@ Page({
     apiFuncs.isFavorite(options.faceId).then(res => {
       if (res.code == 2000) {
         that.setData({
-          favorited: res.data.is_favorite
+          isFavorite: res.data.is_favorite
         });
       }
     });
