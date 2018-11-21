@@ -7,24 +7,25 @@ page {
 .info-area {
   width: 750rpx;
   height: 300rpx;
+  background: white;
 }
 
 .avatar-wrap {
   width: 150rpx;
   height: 150rpx;
-  border-radius: 100%;
+  border-radius: 50%;
   overflow: hidden;
-  z-index: 999;
 }
 
 .avatar {
   width: 150rpx;
   height: 150rpx;
+  z-index: 99999;
 }
 
 .nickname {
   margin-top: 30rpx;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .function-area {

@@ -7,7 +7,9 @@
     "pages/mine/favorites/favorites",
     "pages/subpage/list/list",
     "pages/subpage/share/share",
-    "pages/subpage/edit/edit"
+    "pages/subpage/edit/edit",
+    "pages/mine/minis/minis",
+    "pages/mine/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",
