@@ -5,9 +5,8 @@ page {
 }
 
 .list-area {
-  margin-top: 45px;
+  margin-top: 10px;
   padding-left: 5rp;
-  padding-top: 25rpx;
   flex-wrap: wrap;
 }
 

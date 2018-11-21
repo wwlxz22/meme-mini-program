@@ -13,7 +13,7 @@
       <image style="width: 60rpx; height: 60rpx; margin-right: 25rpx;" src='/images/icon/right.png' />
     </view>
   </view>
-  <view style="height: 2rpx; width: 700rpx; margin-left: 25rpx; background: #e2e2e2;" />
+  <!-- <view style="height: 2rpx; width: 700rpx; margin-left: 25rpx; background: #e2e2e2;" />
   <view class="flex-row items-center" style="width: 750rpx; height: 100rpx;" bindtap="navigateToFavorite">
     <image style="width: 60rpx; height: 60rpx; margin-left: 25rpx; " src='/images/icon/minis.png' />
     <view class='flex-row items-center ' style="justify-content: space-between; flex: 1;  margin-left: 25rpx;">
@@ -28,5 +28,5 @@
       <text>反馈建议</text>
       <image style="width: 60rpx; height: 60rpx; margin-right: 25rpx;" src='/images/icon/right.png' />
     </view>
-  </view>
+  </view> -->
 </view>
