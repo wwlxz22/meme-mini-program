@@ -1,4 +1,4 @@
-const DEVELOP_URL = `http://192.168.10.10/api`;
+const DEVELOP_URL = `http://doutu.test/api`;
 const PRODUCT_URL = `https://www.xiaochongleyuan.com/api/bqb`;
 const BASE_URL = DEVELOP_URL;
 
