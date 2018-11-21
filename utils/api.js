@@ -1,5 +1,5 @@
 const DEVELOP_URL = `http://doutu.test/api`;
-const PRODUCT_URL = `https://www.xiaochongleyuan.com/api/bqb`;
+const PRODUCT_URL = `https://doutu.xiaochongleyuan.com/api/bqb`;
 const BASE_URL = DEVELOP_URL;
 
 module.exports = {
