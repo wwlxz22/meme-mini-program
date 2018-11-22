@@ -101,6 +101,16 @@ const isFavorite = (faceId) => {
   return wxFuncs.request(api.IS_FAVORITE, data);
 }
 
+const feedback = (title, content) => {
+  let data = {
+    user_id: wx.getStorageSync("userId"),
+    token: wx.getStorageSync("token"),
+    title: title,
+    content: content
+  };
+  return wxFuncs.request(api.FEEDBACK, data, "POST");
+}
+
 module.exports = {
   login: login,
   getCategoryList: getCategoryList,

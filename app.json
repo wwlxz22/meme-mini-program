@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mine/feedback/feedback",
     "pages/index/index/index",
     "pages/index/search/search",
     "pages/category/category",
@@ -8,8 +9,7 @@
     "pages/subpage/list/list",
     "pages/subpage/share/share",
     "pages/subpage/edit/edit",
-    "pages/mine/minis/minis",
-    "pages/mine/feedback/feedback"
+    "pages/mine/minis/minis"
   ],
   "window": {
     "backgroundTextStyle": "light",
