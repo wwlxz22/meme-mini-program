@@ -122,5 +122,6 @@ module.exports = {
   search: search,
   getStarFaces: getStarFaces,
   getFavoriteList: getFavoriteList,
-  isFavorite: isFavorite
+  isFavorite: isFavorite,
+  feedback: feedback
 }

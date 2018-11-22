@@ -14,8 +14,9 @@ Page({
    * 提交反馈
    */
   feedback: function(e) {
+    console.info(" [ feedback.js ] ========= feedback >>>>>> e = ", e);
     let data = e.detail.value;
-    if (!data.content || !data.contact) {
+    if (!data.title || !data.content) {
       wx.showToast({
         title: '请输入反馈的内容和标题',
         icon: "none"
@@ -25,8 +26,13 @@ Page({
         if (res.code == 2000) {
           wx.showToast({
             title: '感谢您的反馈',
-            title: "none"
+            icon: "none",
+            duration: 2000,
+            mask: true
           });
+          setTimeout(() => {
+            wx.navigateBack({})
+          }, 2000)
         }
       });
     }
