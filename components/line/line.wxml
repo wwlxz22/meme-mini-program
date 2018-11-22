@@ -1,0 +1,1 @@
+<view style="height: {{lheight}}rpx; width: {{lwidth}}rpx; background: {{lcolor}};" />

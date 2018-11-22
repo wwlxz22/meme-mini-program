@@ -1,0 +1,23 @@
+@import "../../common/common.wxss"
+.menu-item {
+  width: 750rpx;
+  height: 100rpx;
+}
+
+.menu-item-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 25rpx;
+}
+
+.menu-title-wrap {
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 25rpx;
+}
+
+.menu-next-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 25rpx;
+}

@@ -1,3 +1,4 @@
+<!-- 个人信息区域 -->
 <view class='info-area flex-column items-center justify-center'>
   <!-- <image class="info-area" style='position: absolute; top: 0; left: 0;' src='/images/info_bg.png' /> -->
   <view class="avatar-wrap">
@@ -5,28 +6,15 @@
   </view>
   <open-data class="nickname" type="userNickName" />
 </view>
-<view class="function-area flex-column items-center">
-  <view class="flex-row items-center" style="width: 750rpx; height: 100rpx;" bindtap="navigateToFavorite">
-    <image style="width: 60rpx; height: 60rpx; margin-left: 25rpx; " src='/images/icon/favorite.png' />
-    <view class='flex-row items-center ' style="justify-content: space-between; flex: 1;  margin-left: 25rpx;">
-      <text>我的收藏</text>
-      <image style="width: 60rpx; height: 60rpx; margin-right: 25rpx;" src='/images/icon/right.png' />
-    </view>
-  </view>
-  <!-- <view style="height: 2rpx; width: 700rpx; margin-left: 25rpx; background: #e2e2e2;" />
-  <view class="flex-row items-center" style="width: 750rpx; height: 100rpx;" bindtap="navigateToFavorite">
-    <image style="width: 60rpx; height: 60rpx; margin-left: 25rpx; " src='/images/icon/minis.png' />
-    <view class='flex-row items-center ' style="justify-content: space-between; flex: 1;  margin-left: 25rpx;">
-      <text>精品推荐</text>
-      <image style="width: 60rpx; height: 60rpx; margin-right: 25rpx;" src='/images/icon/right.png' />
-    </view>
-  </view>
-  <view style="height: 2rpx; width: 700rpx; margin-left: 25rpx; background: #e2e2e2;" />
-  <view class="flex-row items-center" style="width: 750rpx; height: 100rpx;" bindtap="navigateToFavorite">
-    <image style="width: 60rpx; height: 60rpx; margin-left: 25rpx; " src='/images/icon/feedback.png' />
-    <view class='flex-row items-center ' style="justify-content: space-between; flex: 1;  margin-left: 25rpx;">
-      <text>反馈建议</text>
-      <image style="width: 60rpx; height: 60rpx; margin-right: 25rpx;" src='/images/icon/right.png' />
-    </view>
-  </view> -->
+
+<!-- 菜单区域 -->
+<view class="menu-area flex-column items-center">
+  <menu-item url="/pages/mine/favorites/favorites" icon="/images/icon/favorite.png" title="我的收藏" />
+  <line lheight="2" lwidth="700" lcolor="#e2e2e2" />
+  <menu-item url="/pages/mine/minis/minis" icon="/images/icon/minis.png" title="精品推荐" />
+  <line lheight="3" lwidth="700" lcolor="#e2e2e2" />
+  <menu-item url="/pages/mine/feedback/feedback" icon="/images/icon/feedback.png" title="反馈建议" />
 </view>
+
+<!-- 分享 -->
+<button class="share-btn flex-row items-center justify-center" open-type='share'>分享给好友</button>
