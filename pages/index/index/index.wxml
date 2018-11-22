@@ -20,7 +20,7 @@
   <view>
     <block wx:for="{{faceList}}" wx:for-item="item" wx:key="key" wx:index="index">
       <face-item class="face-item" raw="{{item.raw_image}}" full="{{item.full_image}}" faceid="{{item.face_id}}" />
-      <ad style="maring-left: 25rpx; margin-right: 25rpx; margin-bottom: 20rpx;" unit-id="adunit-c00ee437f3e39ec8" wx:if="{{(index + 1 ) % 30 == 0}}" />
+      <ad style="maring-left: 25rpx; margin-right: 25rpx; margin-bottom: 20rpx;" unit-id="adunit-c00ee437f3e39ec8" wx:if="{{(index + 1 ) % 60 == 0}}" />
     </block>
   </view>
 </scroll-view>
