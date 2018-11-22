@@ -101,6 +101,9 @@ const isFavorite = (faceId) => {
   return wxFuncs.request(api.IS_FAVORITE, data);
 }
 
+/**
+ * 反馈
+ */
 const feedback = (title, content) => {
   let data = {
     user_id: wx.getStorageSync("userId"),

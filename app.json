@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/mine/feedback/feedback",
     "pages/index/index/index",
     "pages/index/search/search",
     "pages/category/category",
     "pages/mine/index/index",
     "pages/mine/favorites/favorites",
+    "pages/mine/feedback/feedback",
+    "pages/mine/minis/minis",
     "pages/subpage/list/list",
     "pages/subpage/share/share",
-    "pages/subpage/edit/edit",
-    "pages/mine/minis/minis"
+    "pages/subpage/edit/edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
