@@ -1,4 +1,6 @@
-// pages/mine/minis/minis.js
+const apiFuncs = require("../../../utils/apiFuncs.js");
+const funcs = require("../../../utils/funcs.js");
+
 Page({
 
   /**
@@ -61,6 +63,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return funcs.getShareData();
   }
 })

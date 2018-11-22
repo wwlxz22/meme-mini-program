@@ -3,6 +3,7 @@
 let url = "https://www.xiaochongleyuan.com/api";
 const app = getApp();
 const apiFuncs = require("../../../utils/apiFuncs.js");
+const funcs = require("../../../utils/funcs.js");
 
 Page({
   data: {
@@ -155,6 +156,6 @@ Page({
 
   },
   onShareAppMessage() {
-
+    return funcs.getShareData();
   }
 })

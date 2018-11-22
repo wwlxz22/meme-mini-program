@@ -1,4 +1,5 @@
-// pages/edit/edit.js
+const apiFuncs = require("../../../utils/apiFuncs.js");
+const funcs = require("../../../utils/funcs.js");
 
 Page({
 
@@ -109,7 +110,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return funcs.getShareData();
   },
   move: function(e) {
     //console.log(e);
