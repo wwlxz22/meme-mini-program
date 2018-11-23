@@ -116,3 +116,7 @@ page {
   z-index: 100;
   width: 100%;
 }
+
+.ad {
+  margin-bottom: 20rpx;
+}

@@ -1,7 +1,7 @@
 <!--pages/share/share.wxml-->
 <view>
   <image src='{{src}}' class='image' mode='widthFix'></image>
-  <view class='flex-row items-center' style='width: 750rpx; height: 120rpx; justify-content: space-around; margin-bottom: 30rpx;'>
+  <view class='fuction-area flex-row items-center'>
     <view bindtap='edit' class='flex-row items-center btn'>自定义表情文字</view>
     <view bindtap='battle' class='flex-row items-center btn'>直接发送，与好友斗图</view>
     <view class="flex-row items-center justify-center" style='width: 80rpx; height: 80rpx; background-color: #ffb36c; border-radius: 10px;' bindtap='addFavorite'>

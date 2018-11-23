@@ -32,3 +32,11 @@ page {
   color: #555;
   margin-left: 75rpx;
 }
+
+.fuction-area {
+  width: 700rpx;
+  height: 120rpx;
+  margin-left: 25rpx;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}
