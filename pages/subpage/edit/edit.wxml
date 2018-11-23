@@ -3,25 +3,28 @@
   <canvas canvas-id='my' style="width:{{picWidth}}px;height:{{picHeight}}px;"></canvas>
 </view>
 <view style=''>
-  <image src='{{raw}}' style="width:{{picWidth}}px;height:{{picHeight}}px" ></image>
+  <image src='{{raw}}' style="width:{{picWidth}}px;height:{{picHeight}}px"></image>
 </view>
 <input value='{{value}}' style='position:fixed;top:{{y}}px;left:{{x}}px;height:{{size*2+5}}rpx;font-size:{{size}}px;color:{{color}};z-index:10000' placeholder="请输入表情包的文字" bindtouchmove='move' bindinput='input'></input>
+
+<view class="menu-area flex-row">
+  <view class='option-area flex-column items-center'>
+    <view class="option-title flex-column items-center justify-center {{ currentOption == 'color'? 'option-active':''}}" bindtap='changeOption' data-option='color'>文字颜色</view>
+    <view class="option-title flex-column items-center justify-center {{ currentOption == 'size'? 'option-active':''}}" bindtap='changeOption' data-option='size'>文字大小</view>
+    <view class="option-title flex-column items-center justify-center {{ currentOption == 'typeset'? 'option-active':''}}" bindtap='changeOption' data-option='typeset'>文字排版</view>
+  </view>
+  <view class='value-area flex-row'>
+    <block wx:for="{{colorList}}" wx:key="key" wx:if="{{currentOption == 'color'}}">
+      <view class='color-item' bindtap='changeColor' data-color='{{item}}' style="background: {{item}}"></view>
+    </block>
+    <block wx:for="{{sizeList}}" wx:key="key" wx:if="{{currentOption == 'size'}}">
+      <view class='size-item flex-row items-center justify-center' bindtap='changeSize' data-size='{{item.value}}'>{{item.name}}</view>
+    </block>
+    <block wx:for="{{typesetList}}" wx:key="key" wx:if="{{currentOption == 'typeset'}}">
+      <view class='typeset-item flex-row items-center justify-center' bindtap='changeTypeset' data-orit='{{item.orit}}' data-line="{{item.line}}">{{item.name}}</view>
+    </block>
+  </view>
+</view>
 <view>
-<view class='title'>文字颜色</view>
-<view class='color'>
-  <view class='red' bindtap='changeColor' data-color='#FF0000'></view>
-  <view class='black' bindtap='changeColor' data-color='#000000'></view>
-  <view class='green' bindtap='changeColor' data-color='#00FF00'></view>
-  <view class='blue' bindtap='changeColor' data-color='#0000FF'></view>
-  <view class='orange' bindtap='changeColor' data-color='#FFA500'></view>
-</view>
-<view class='title'>文字大小</view>
-<view class='color'>
-  <view class='very_small' bindtap='change' data-size='18'>很小</view>
-  <view class='small' bindtap='change' data-size='20'>小</view>
-  <view class='normal' bindtap='change' data-size='25'>一般</view>
-  <view class='big' bindtap='change' data-size='30'>大</view>
-  <view class='very_big' bindtap='change' data-size='40'>很大</view>
-</view>
-<button bindtap='generate' class='btn'>生成表情，发送给好友</button>
+  <button bindtap='generate' class='btn'>生成表情，发送给好友</button>
 </view>

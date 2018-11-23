@@ -32,7 +32,7 @@ Page({
           });
           setTimeout(() => {
             wx.navigateBack({})
-          }, 2000)
+          }, 2000);
         }
       });
     }

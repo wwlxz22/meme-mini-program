@@ -14,11 +14,60 @@ Page({
     y: 20,
     windowWidth: 0,
     windowHeight: 0,
-    size: 30,
-    color: '#000000',
-    value :'',
-    path:'',
-    display:'none'
+    size: 30, // 字体大小
+    color: '#000000', // 字体颜色
+    orit: "hor", // 字体方向
+    line: "sing", // 行数
+    value: '',
+    path: '',
+    display: 'none',
+    currentOption: "color",
+    colorList: ["#000000", "#FFFFFF", "#191970", "#87CEEB", "#228B22", "#3CB371", "#FFFF00", "#4B0082", "#FFA500", "#DC143C", "#696969", "#FF1493", "#F5DEB3", "#FFB6C1", "#00FFFF"],
+    sizeList: [{
+      name: "很小",
+      value: "18"
+    }, {
+      name: "较小",
+      value: "20"
+    }, {
+      name: "适中",
+      value: "25"
+    }, {
+      name: "较大",
+      value: "30"
+    }, {
+      name: "很大",
+      value: "40"
+    }],
+    typesetList: [{
+      name: "横行单排",
+      orit: "hor",
+      line: "sing"
+    }, {
+      name: "横向双排",
+      orit: "hor",
+      line: "doub"
+    }, {
+      name: "纵向单排",
+      orit: "ver",
+      line: "sing"
+    }, {
+      name: "纵向双排",
+      orit: "ver",
+      line: "doub"
+    }],
+  },
+
+  /**
+   * 修改类型
+   */
+  changeOption: function(e) {
+    console.info(" [ edit.js ] ================ changeOption >>>>> e = ", e);
+    let that = this,
+      data = e.currentTarget.dataset;
+    that.setData({
+      currentOption: data.option
+    })
   },
 
   /**
@@ -26,7 +75,9 @@ Page({
    */
   input: function(res) {
     //console.log(res);
-    this.setData({value:res.detail.value});
+    this.setData({
+      value: res.detail.value
+    });
   },
   onLoad: function(options) {
     let that = this;
@@ -45,9 +96,9 @@ Page({
             that.setData({
               picHeight: res.height * that.data.windowWidth / res.width,
               picWidth: that.data.windowWidth,
-              path:res.path
+              path: res.path
             });
-            
+
           }
         })
       }
@@ -66,7 +117,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    if(wx.getStorageSync('has_gen')){
+    if (wx.getStorageSync('has_gen')) {
       let that = this;
       const ctx = wx.createCanvasContext('my');
       ctx.drawImage(that.data.raw, 0, 0, that.data.picWidth, that.data.picHeight)
@@ -74,8 +125,6 @@ Page({
       console.log('重新加载图片');
       wx.removeStorageSync('has_gen');
     }
-
-   
   },
 
   /**
@@ -123,32 +172,52 @@ Page({
       y: y
     })
   },
-  change: function(e) {
+
+  /**
+   * 修改文字大小
+   */
+  changeSize: function(e) {
     let size = e.currentTarget.dataset.size;
     this.setData({
       size: size
     });
   },
+
+  /**
+   * 修改文字颜色
+   */
   changeColor: function(e) {
     let color = e.currentTarget.dataset.color;
     this.setData({
       color: color
     });
   },
+
+  /**
+   * 修改文字排版
+   */
+  changeTypeset: function(e) {
+    let that = this,
+      data = e.currentTarget.dataset;
+
+  },
+
   generate: function() {
     // let that = this;
     let fontColor = this.data.color;
-    if(!this.data.value){
+    if (!this.data.value) {
       wx.showToast({
         title: '请输入文字',
-        icon:'loading'
+        icon: 'loading'
       })
       return false;
     }
     wx.showLoading({
       title: '生成表情包中',
     })
-    this.setData({ display: '' });
+    this.setData({
+      display: ''
+    });
     let that = this;
     const ctx = wx.createCanvasContext('my');
     ctx.drawImage(that.data.path, 0, 0, that.data.picWidth, that.data.picHeight)
@@ -166,9 +235,9 @@ Page({
         height: that.data.picHeight,
         destWidth: that.data.picWidth,
         destHeight: that.data.picHeight,
-        canvasId:'my',
+        canvasId: 'my',
         success: function(res) {
-          console.log(res.tempFilePath+'-------')
+          console.log(res.tempFilePath + '-------')
           wx.previewImage({
             urls: [res.tempFilePath],
           })
@@ -176,7 +245,7 @@ Page({
         fail(res) {
           console.log(res);
         },
-        complete(){
+        complete() {
           wx.hideLoading();
         }
       })

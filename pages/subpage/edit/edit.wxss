@@ -1,46 +1,62 @@
 /* pages/edit/edit.wxss */
+@import "../../../common/common.wxss";
+
+page {
+  background: #e2e2e2;
+}
+
+.menu-area {
+  width: 750rpx;
+  height: 250rpx;
+  margin-top: 15rpx;
+  background: white;
+}
+
+.option-area {
+  width: 180rpx;
+}
+
+.option-title {
+  width: 180rpx;
+  flex: 1;
+  font-size: 34rpx;
+  border: solid 1rpx #f2f2f2;
+}
+
+.option-active {
+  color: green;
+}
+
+.value-area {
+  height: 250rpx;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
 
 .edit {
   margin: 20rpx 25rpx;
 }
 
-page {
-  background: #eee;
-}
-
-.red {
+.color-item {
   width: 80rpx;
   height: 80rpx;
-  background: red;
+  margin-left: 25rpx;
+  margin-top: 25rpx;
   border-radius: 50rpx;
+  border: solid black 1rpx;
 }
 
-.black {
-  width: 80rpx;
+.size-item {
+  width: 100%;
   height: 80rpx;
-  background: black;
-  border-radius: 50rpx;
+  border-top: solid 1rpx #f2f2f2;
 }
 
-.blue {
-  width: 80rpx;
+.typeset-item {
+  width: 100%;
   height: 80rpx;
-  background: blue;
-  border-radius: 50rpx;
-}
-
-.orange {
-  width: 80rpx;
-  height: 80rpx;
-  background: orange;
-  border-radius: 50rpx;
-}
-
-.green {
-  width: 80rpx;
-  height: 80rpx;
-  background: green;
-  border-radius: 50rpx;
+  border-top: solid 1rpx #f2f2f2;
 }
 
 .color {
@@ -101,11 +117,13 @@ page {
   font-size: 14px;
   padding: 5px;
 }
+
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 75rpx;
+  margin-top: 25rpx;
   border-radius: 20px;
   background-color: #2fcf19;
   height: 80rpx;
