@@ -11,12 +11,19 @@ page {
   margin: 20rpx 25rpx;
 }
 
+.fuction-area {
+  width: 700rpx;
+  height: 120rpx;
+  margin-left: 25rpx;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+
 .btn {
   justify-content: center;
   border-radius: 10px;
   background-color: #ffb36c;
   height: 80rpx;
-  width: 300rpx;
   align-self: center;
   font-size: 28rpx;
   color: #fff;
@@ -31,12 +38,4 @@ page {
   font-size: 26rpx;
   color: #555;
   margin-left: 75rpx;
-}
-
-.fuction-area {
-  width: 700rpx;
-  height: 120rpx;
-  margin-left: 25rpx;
-  justify-content: space-around;
-  margin-bottom: 30rpx;
 }
