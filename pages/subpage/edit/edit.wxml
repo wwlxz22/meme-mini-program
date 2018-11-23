@@ -5,23 +5,27 @@
 <view style=''>
   <image src='{{raw}}' style="width:{{picWidth}}px;height:{{picHeight}}px"></image>
 </view>
-<input value='{{value}}' style='position:fixed;top:{{y}}px;left:{{x}}px;height:{{size*2+5}}rpx;font-size:{{size}}px;color:{{color}};z-index:10000' placeholder="请输入表情包的文字" bindtouchmove='move' bindinput='input'></input>
+
+<view style='position:fixed;top:{{y}}px;left:{{x}}px;font-size:{{size}}px;color:{{color}};z-index:10000' bindtouchmove='move'>
+  <input value='{{line1}}' style="height:{{size*2+5}}rpx;" placeholder="请输入表情包的文字" bindinput='inputLine1'></input>
+  <input value='{{line2}}' style='margin-top: 10rpx; height:{{size*2+5}}rpx;' placeholder="请输入表情包的文字" bindinput='inputLine2' wx:if="{{typeset=='double'}}"></input>
+</view>
 
 <view class="menu-area flex-row">
   <view class='option-area flex-column items-center'>
-    <view class="option-title flex-column items-center justify-center {{ currentOption == 'color'? 'option-active':''}}" bindtap='changeOption' data-option='color'>文字颜色</view>
-    <view class="option-title flex-column items-center justify-center {{ currentOption == 'size'? 'option-active':''}}" bindtap='changeOption' data-option='size'>文字大小</view>
-    <view class="option-title flex-column items-center justify-center {{ currentOption == 'typeset'? 'option-active':''}}" bindtap='changeOption' data-option='typeset'>文字排版</view>
+    <view class="option-title flex-column items-center justify-center {{ currentOption=='color' ? 'option-active': ''}}" bindtap='changeOption' data-option='color'>文字颜色</view>
+    <view class="option-title flex-column items-center justify-center {{ currentOption=='size' ? 'option-active': ''}}" bindtap='changeOption' data-option='size'>文字大小</view>
+    <view class="option-title flex-column items-center justify-center {{ currentOption=='typeset' ? 'option-active': ''}}" bindtap='changeOption' data-option='typeset'>文字排版</view>
   </view>
   <view class='value-area flex-row'>
-    <block wx:for="{{colorList}}" wx:key="key" wx:if="{{currentOption == 'color'}}">
-      <view class='color-item' bindtap='changeColor' data-color='{{item}}' style="background: {{item}}"></view>
+    <block wx:for="{{colorList}}" wx:key="key" wx:if="{{currentOption=='color'}}">
+      <view class='color-item' bindtap='changeColor' data-color='{{item}}' style="background: {{item}}" />
     </block>
-    <block wx:for="{{sizeList}}" wx:key="key" wx:if="{{currentOption == 'size'}}">
+    <block wx:for="{{sizeList}}" wx:key="key" wx:if="{{currentOption=='size'}}">
       <view class='size-item flex-row items-center justify-center' bindtap='changeSize' data-size='{{item.value}}'>{{item.name}}</view>
     </block>
-    <block wx:for="{{typesetList}}" wx:key="key" wx:if="{{currentOption == 'typeset'}}">
-      <view class='typeset-item flex-row items-center justify-center' bindtap='changeTypeset' data-orit='{{item.orit}}' data-line="{{item.line}}">{{item.name}}</view>
+    <block wx:for="{{typesetList}}" wx:key="key" wx:if="{{currentOption=='typeset'}}">
+      <view class='typeset-item flex-row items-center justify-center' bindtap='changeTypeset' data-value='{{item.value}}'>{{item.name}}</view>
     </block>
   </view>
 </view>

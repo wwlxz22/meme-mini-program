@@ -16,13 +16,13 @@ Page({
     windowHeight: 0,
     size: 30, // 字体大小
     color: '#000000', // 字体颜色
-    orit: "hor", // 字体方向
-    line: "sing", // 行数
-    value: '',
+    typeset: "single",
+    line1: '',
+    line2: '',
     path: '',
     display: 'none',
     currentOption: "color",
-    colorList: ["#000000", "#FFFFFF", "#191970", "#87CEEB", "#228B22", "#3CB371", "#FFFF00", "#4B0082", "#FFA500", "#DC143C", "#696969", "#FF1493", "#F5DEB3", "#FFB6C1", "#00FFFF"],
+    colorList: ["#000000", "#FFFFFF", "#191970", "#87CEEB", "#228B22", "#3CB371", "#FFFF00", "#4B0082", "#FFA500", "#DC143C", "#696969", "#FF1493", "#F5DEB3", "#FFB6C1", "#00FFFF", "#3CB371", "#FF0000", "#FF4500"],
     sizeList: [{
       name: "很小",
       value: "18"
@@ -40,21 +40,11 @@ Page({
       value: "40"
     }],
     typesetList: [{
-      name: "横行单排",
-      orit: "hor",
-      line: "sing"
+      name: "单行",
+      value: "single"
     }, {
-      name: "横向双排",
-      orit: "hor",
-      line: "doub"
-    }, {
-      name: "纵向单排",
-      orit: "ver",
-      line: "sing"
-    }, {
-      name: "纵向双排",
-      orit: "ver",
-      line: "doub"
+      name: "双行",
+      value: "double"
     }],
   },
 
@@ -71,14 +61,23 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 第一行文字
    */
-  input: function(res) {
-    //console.log(res);
+  inputLine1: function(res) {
     this.setData({
-      value: res.detail.value
+      line1: res.detail.value
     });
   },
+
+  /**
+   * 第二行文字
+   */
+  inputLine2: function(e) {
+    this.setData({
+      line2: e.detail.value
+    });
+  },
+
   onLoad: function(options) {
     let that = this;
     this.setData({
@@ -98,7 +97,6 @@ Page({
               picWidth: that.data.windowWidth,
               path: res.path
             });
-
           }
         })
       }
@@ -161,6 +159,7 @@ Page({
   onShareAppMessage: function() {
     return funcs.getShareData();
   },
+
   move: function(e) {
     //console.log(e);
     let [x, y] = [e.touches[0].pageX, e.touches[0].pageY];
@@ -199,16 +198,18 @@ Page({
   changeTypeset: function(e) {
     let that = this,
       data = e.currentTarget.dataset;
-
+    that.setData({
+      typeset: data.value
+    })
   },
 
   generate: function() {
     // let that = this;
     let fontColor = this.data.color;
-    if (!this.data.value) {
+    if (!this.data.line1) {
       wx.showToast({
         title: '请输入文字',
-        icon: 'loading'
+        icon: 'none'
       })
       return false;
     }
@@ -224,7 +225,10 @@ Page({
     //console.log(ctx);
     ctx.setFontSize(that.data.size);
     ctx.setFillStyle(fontColor); // TODO 
-    ctx.fillText(that.data.value, that.data.x, that.data.y + 30);
+    ctx.fillText(that.data.line1, that.data.x, that.data.y + 30);
+    if (that.data.line2 !== "") {
+      ctx.fillText(that.data.line2, that.data.x, that.data.y + that.data.size / 1.1 + 30);
+    }
     ctx.draw(false, () => {
       wx.setStorageSync('has_gen', true)
       console.log('已经进入draw');
@@ -250,6 +254,5 @@ Page({
         }
       })
     });
-    //console.log('res');
   }
 })
