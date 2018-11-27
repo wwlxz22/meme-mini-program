@@ -19,6 +19,17 @@ const request = (url, data = {}, method = "GET") => {
 }
 
 /**
+ * 需要登陆的请求
+ */
+const loginedRequest = (url, data = {}, method = "GET") => {
+  let userId = wx.getStorageSync("userId"),
+    token = wx.getStorageSync("token");
+  data.token = token;
+  data.user_id = userId;
+  return request(url, data, method);
+}
+
+/**
  * 微信登陆接口
  */
 const login = () => {
@@ -40,5 +51,6 @@ const login = () => {
 
 module.exports = {
   request: request,
+  loginedRequest: loginedRequest,
   login: login
 }

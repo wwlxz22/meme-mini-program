@@ -1,6 +1,9 @@
 const api = require("../utils/api.js");
 const wxFuncs = require("../utils/wxFuncs.js");
 
+/**
+ * 登陆
+ */
 const login = (code) => {
   let data = {
     code: code
@@ -40,29 +43,21 @@ const getFaceById = (faceId) => {
  * 添加收藏
  */
 const addFavorite = (faceId, type) => {
-  let userId = wx.getStorageSync("userId"),
-    token = wx.getStorageSync("token");
   let data = {
-    user_id: userId,
-    token: token,
     face_id: faceId,
     type: type
   }
-  return wxFuncs.request(api.ADD_FAVORITE, data, "POST");
+  return wxFuncs.loginedRequest(api.ADD_FAVORITE, data, "POST");
 }
 
 /**
  * 获取收藏列表
  */
 const getFavoriteList = (pageNo = 1) => {
-  let userId = wx.getStorageSync("userId"),
-    token = wx.getStorageSync("token");
   let data = {
-    user_id: userId,
-    token: token,
     pageNo: pageNo
   }
-  return wxFuncs.request(api.GET_FAVORITE, data);
+  return wxFuncs.loginedRequest(api.GET_FAVORITE, data);
 }
 
 /**
@@ -91,14 +86,10 @@ const getStarFaces = (type, pageNo = 1) => {
  * 判断是否收藏
  */
 const isFavorite = (faceId) => {
-  let userId = wx.getStorageSync("userId"),
-    token = wx.getStorageSync("token");
   let data = {
-    user_id: userId,
-    token: token,
     face_id: faceId
   }
-  return wxFuncs.request(api.IS_FAVORITE, data);
+  return wxFuncs.loginedRequest(api.IS_FAVORITE, data);
 }
 
 /**
@@ -106,12 +97,10 @@ const isFavorite = (faceId) => {
  */
 const feedback = (title, content) => {
   let data = {
-    user_id: wx.getStorageSync("userId"),
-    token: wx.getStorageSync("token"),
     title: title,
     content: content
   };
-  return wxFuncs.request(api.FEEDBACK, data, "POST");
+  return wxFuncs.loginedRequest(api.FEEDBACK, data, "POST");
 }
 
 module.exports = {
