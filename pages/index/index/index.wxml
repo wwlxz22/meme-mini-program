@@ -1,3 +1,5 @@
+<import src="/template/footer/footer.wxml" xmlns:wx="http://www.w3.org/1999/xhtml" />
+
 <loading wx:if="{{showLoading}}">加载中</loading>
 <view class='top'>
   <!-- 搜索 -->
@@ -22,4 +24,5 @@
     <face-item class="face-item" raw="{{item.raw_image}}" full="{{item.full_image}}" faceid="{{item.face_id}}" isgif="{{item.is_gif}}" diytype="{{item.diy_type}}" />
     <ad class="ad" unit-id="adunit-c00ee437f3e39ec8" wx:if="{{(index + 1 ) % 60 == 0}}" />
   </block>
+  <template is="footer" />
 </scroll-view>

@@ -1,8 +1,5 @@
 @import "../../../common/common.wxss";
-
-page {
-  background: #e2e2e2;
-}
+@import "../../../template/footer/footer.wxss";
 
 .list-area {
   width: 750rpx;
@@ -17,4 +14,9 @@ page {
   display: inline-block;
   border-radius: 15rpx;
   overflow: hidden;
+  border: solid #e2e2e2 1rpx;
+}
+
+.footer {
+  margin-left: 10rpx;
 }

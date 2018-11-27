@@ -1,5 +1,8 @@
+<import src="/template/footer/footer.wxml" xmlns:wx="http://www.w3.org/1999/xhtml" />
+
 <view class='list-area flex-row items-center'>
   <block wx:for="{{faceList}}" wx:for-item="item" wx:key="key">
     <face-item class="face-item" raw="{{item.raw_image}}" full="{{item.full_image}}" faceid="{{item.face_id}}" isgif="{{item.is_gif}}" diytype="{{item.diy_type}}" />
   </block>
+  <template is="footer" />
 </view>

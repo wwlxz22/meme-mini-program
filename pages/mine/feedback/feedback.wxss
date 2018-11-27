@@ -1,9 +1,5 @@
 @import "../../../common/common.wxss";
 
-page {
-  background: #f2f2f2;
-}
-
 .feedback-item {
   width: 700rpx;
   margin-top: 25rpx;

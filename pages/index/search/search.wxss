@@ -1,10 +1,6 @@
 @import "../../../common/common.wxss";
 
-page {
-  background: #e2e2e2;
-}
-
-.search-area{
+.search-area {
   position: fixed;
   left: 0;
   top: 0;

@@ -1,10 +1,6 @@
 /* pages/edit/edit.wxss */
 @import "../../../common/common.wxss";
 
-page {
-  background: #e2e2e2;
-}
-
 .menu-area {
   width: 750rpx;
   height: 275rpx;

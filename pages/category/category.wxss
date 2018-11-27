@@ -1,9 +1,5 @@
 @import "../../common/common.wxss";
 
-page {
-  background: #e2e2e2;
-}
-
 .category-area {
   width: 100%;
   flex-wrap: wrap;

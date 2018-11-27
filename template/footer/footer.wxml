@@ -1,0 +1,7 @@
+<template name="footer">
+  <view class="footer-main flex-row items-center">
+    <line lheight="2" lwidth="220" lcolor="#e2e2e2" />
+    <text class="footer-title">人家也是有底线的</text>
+    <line lheight="2" lwidth="220" lcolor="#e2e2e2" />
+  </view>
+</template>

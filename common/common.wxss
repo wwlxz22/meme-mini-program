@@ -1,17 +1,21 @@
-.flex-row{
+page {
+  background: #f4f4f4;
+}
+
+.flex-row {
   display: flex;
   flex-direction: row;
 }
 
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
 }
 
-.justify-center{
+.justify-center {
   justify-content: center;
 }
 
-.items-center{
+.items-center {
   align-items: center;
 }

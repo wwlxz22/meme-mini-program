@@ -1,0 +1,13 @@
+@import "../../common/common.wxss";
+
+.footer-main {
+  height: 60rpx;
+  width: 700rpx;
+  margin-left: 10rpx;
+  justify-content: space-between;
+}
+
+.footer-title {
+  font-size: 24rpx;
+  color: #e2e2e2;
+}
