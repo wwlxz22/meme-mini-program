@@ -3,7 +3,8 @@
   <image src='{{src}}' class='image' mode='widthFix'></image>
   <view class='fuction-area flex-row items-center'>
     <view bindtap='battle' class='flex-row items-center btn' style='width: 320rpx;'>直接发送，与好友斗图</view>
-    <view bindtap='edit' class='flex-row items-center btn' style="width: 240rpx;" wx:if="{{diyType!=0}}">自定义表情文字</view>
+    <!-- <view bindtap='edit' class='flex-row items-center btn' style="width: 240rpx;" wx:if="{{diyType!=0}}">自定义表情文字</view> -->
+    <view bindtap='edit' class='flex-row items-center btn' style="width: 240rpx;">自定义表情文字</view>
     <view class="flex-row items-center justify-center" style='width: 80rpx; height: 80rpx; background-color: #ffb36c; border-radius: 10px;' bindtap='addFavorite'>
       <image style='width: 60rpx; height: 60rpx;' src='/images/icon/like.png' wx:if="{{isFavorite == 0}}" />
       <image style='width: 60rpx; height: 60rpx;' src='/images/icon/like_fill.png' wx:else/>
