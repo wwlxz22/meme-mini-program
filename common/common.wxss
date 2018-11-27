@@ -19,3 +19,7 @@ page {
 .items-center {
   align-items: center;
 }
+
+.pingfangsc-m {
+  font-family: PingFangSC-Medium;
+}

@@ -4,7 +4,7 @@
   <view class="avatar-wrap">
     <open-data class="avatar" type="userAvatarUrl" />
   </view>
-  <open-data class="nickname" type="userNickName" />
+  <open-data class="nickname pingfangsc-m" type="userNickName" />
 </view>
 
 <!-- 菜单区域 -->
@@ -17,4 +17,4 @@
 </view>
 
 <!-- 分享 -->
-<button class="share-btn flex-row items-center justify-center" open-type='share'>分享给好友</button>
+<button class="share-btn flex-row items-center justify-center pingfangsc-m" open-type='share'>分享给好友</button>

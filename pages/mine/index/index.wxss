@@ -31,9 +31,9 @@
 }
 
 .share-btn {
-  margin-top: 35rpx;
-  width: 550rpx;
+  width: 650rpx;
   height: 100rpx;
+  margin-top: 250rpx;
   background: red;
   color: white;
 }
