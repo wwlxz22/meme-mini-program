@@ -1,14 +1,14 @@
 @import "../../common/common.wxss";
 
 .item-main {
-  width: 150rpx;
-  height: 200rpx;
+  width: 160rpx;
+  height: 220rpx;
   background: white;
 }
 
 .item-cover {
-  width: 150rpx;
-  height: 150rpx;
+  width: 160rpx;
+  height: 160rpx;
 }
 
 .item-title {
@@ -17,4 +17,5 @@
   font-family: PingFangSC-Semibold;
   font-size: 30rpx;
   color: #1e1e1e;
+  border-top: solid #e2e2e2 1rpx;
 }
