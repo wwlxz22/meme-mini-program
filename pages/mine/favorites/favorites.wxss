@@ -17,6 +17,3 @@
   border: solid #e2e2e2 1rpx;
 }
 
-.footer {
-  margin-left: 10rpx;
-}

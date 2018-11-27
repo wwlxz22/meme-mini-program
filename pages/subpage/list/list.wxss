@@ -1,4 +1,5 @@
 @import "../../../template/footer/footer.wxss";
+@import "../../../common/common.wxss";
 
 .list-area {
   width: 750rpx;
@@ -9,7 +10,7 @@
 .face-item {
   width: 220rpx;
   height: 220rpx;
-  margin: 0 10rpx 10rpx 10rpx;
+  margin: 0 10rpx 20rpx 10rpx;
   display: inline-block;
   border-radius: 15rpx;
   overflow: hidden;
