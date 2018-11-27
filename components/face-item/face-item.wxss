@@ -1,4 +1,30 @@
+@import "../../common/common.wxss";
+
 .face-item {
   width: 220rpx;
   height: 220rpx;
+}
+
+.face-image {
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.tag-wrap {
+  margin-top: -220rpx;
+  padding: 10rpx 0rpx 0 10rpx;
+  justify-content: flex-end;
+}
+
+.face-tag {
+  width: 50rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+  font-size: 18rpx;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rpx;
 }

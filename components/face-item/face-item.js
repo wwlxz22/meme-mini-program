@@ -6,7 +6,9 @@ Component({
   properties: {
     raw: String,
     full: String,
-    faceid: String
+    faceid: String,
+    isgif: Number,
+    diytype: Number
   },
 
   /**
