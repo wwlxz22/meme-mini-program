@@ -3,17 +3,19 @@
 
 .list-area {
   width: 750rpx;
-  padding: 15rpx 15rpx 0 15rpx;
-  flex-wrap: wrap;
+  display: flex;
+  padding-top: 15rpx;
+  flex-direction: row;
+  flex-wrap: row wrap;
 }
 
 .face-item {
   width: 220rpx;
   height: 220rpx;
-  margin: 0 10rpx 10rpx 10rpx;
-  display: inline-block;
+  margin-left: 20rpx;
+  margin-top: 12rpx;
+  display: inline-flex;
   border-radius: 15rpx;
   overflow: hidden;
   border: solid #e2e2e2 1rpx;
 }
-
