@@ -5,11 +5,16 @@ page {
 }
 
 .list-area {
-  margin-top: 10px;
-  padding-left: 5rp;
+  width: 750rpx;
+  padding: 15rpx 15rpx 0 15rpx;
   flex-wrap: wrap;
 }
 
 .face-item {
-  margin-left: 20rpx;
+  width: 220rpx;
+  height: 220rpx;
+  margin: 0 10rpx 10rpx 10rpx;
+  display: inline-block;
+  border-radius: 15rpx;
+  overflow: hidden;
 }

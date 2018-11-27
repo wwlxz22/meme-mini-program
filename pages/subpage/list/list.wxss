@@ -2,12 +2,17 @@ page {
   background: #e2e2e2;
 }
 
-.face-item {
-  margin-left: 20rpx;
-  /* margin-top: 20rpx; */
+.list-area {
+  width: 750rpx;
+  padding: 15rpx 15rpx 0 15rpx;
+  flex-wrap: wrap;
 }
 
-.list-area {
-  padding-left: 5rp;
-  padding-top: 25rpx;
+.face-item {
+  width: 220rpx;
+  height: 220rpx;
+  margin: 0 10rpx 10rpx 10rpx;
+  display: inline-block;
+  border-radius: 15rpx;
+  overflow: hidden;
 }
