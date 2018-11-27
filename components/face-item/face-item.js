@@ -25,7 +25,9 @@ Component({
     _navigateToShare: function() {
       let that = this;
       wx.navigateTo({
-        url: '/pages/subpage/share/share?raw=' + that.properties.raw + "&src=" + that.properties.full + "&faceId=" + that.properties.faceid
+        url: '/pages/subpage/faceinfo/faceinfo?diyType=' + that.properties.diytype +
+          '&raw=' + that.properties.raw + "&src=" + that.properties.full +
+          "&faceId=" + that.properties.faceid
       });
     }
   }

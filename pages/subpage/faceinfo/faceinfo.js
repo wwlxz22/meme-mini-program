@@ -10,7 +10,8 @@ Page({
     src: '',
     raw: '',
     faceId: '', // 表情id
-    isFavorite: 0
+    isFavorite: 0,
+    diyType: 0,
   },
 
   /**
@@ -40,7 +41,8 @@ Page({
     that.setData({
       src: options.src,
       raw: options.raw,
-      faceId: options.faceId
+      faceId: options.faceId,
+      diyType: options.diyType
     });
     // 判断是否收藏
     apiFuncs.isFavorite(options.faceId).then(res => {

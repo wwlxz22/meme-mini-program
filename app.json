@@ -8,7 +8,7 @@
     "pages/mine/feedback/feedback",
     "pages/mine/minis/minis",
     "pages/subpage/list/list",
-    "pages/subpage/share/share",
+    "pages/subpage/faceinfo/faceinfo",
     "pages/subpage/edit/edit"
   ],
   "window": {

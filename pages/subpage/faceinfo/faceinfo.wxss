@@ -11,7 +11,7 @@
   width: 700rpx;
   height: 120rpx;
   margin-left: 25rpx;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 30rpx;
 }
 
