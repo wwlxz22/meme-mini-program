@@ -1,8 +1,8 @@
-const DEVELOP_URL = `http://doutu.test/api`;
-const PRODUCT_URL = `https://doutu.xiaochongleyuan.com/api`;
+const DEVELOP_URL = `http://doutu.test/api/doutu`;
+const PRODUCT_URL = `https://doutu.xiaochongleyuan.com/api/doutu`;
 
-// const BASE_URL = DEVELOP_URL;
-const BASE_URL = PRODUCT_URL;
+const BASE_URL = DEVELOP_URL;
+// const BASE_URL = PRODUCT_URL;
 
 module.exports = {
   LOGIN: BASE_URL + `/user/login`, // 登陆接口
