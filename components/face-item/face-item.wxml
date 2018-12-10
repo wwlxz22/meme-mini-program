@@ -1,7 +1,7 @@
 <view class='face-item flex-column'>
   <image class="face-image" src="{{full}}" bindtap="_navigateToShare" />
-  <view class='tag-wrap flex-row items-center'>
+  <!-- <view class='tag-wrap flex-row items-center'>
     <view class='face-tag' style="background: blue;" wx:if="{{isgif==1}}">GIF</view>
     <view class='face-tag' style="background: green;" wx:if="{{diytype!=0}}">DIY</view>
-  </view>
+  </view> -->
 </view>
