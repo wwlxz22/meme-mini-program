@@ -2,6 +2,7 @@
   "navigationBarTitleText": "我",
   "usingComponents": {
     "menu-item": "/components/menu-item/menu-item",
-    "line": "/components/line/line"
+    "line": "/components/line/line",
+    "copyright": "/components/copyright/copyright"
   }
 }
