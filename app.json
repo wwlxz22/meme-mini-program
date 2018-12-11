@@ -39,5 +39,10 @@
         "text": "我"
       }
     ]
-  }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx4b3e763b32874fab",
+    "wxb10e8fd6be9a8ffc",
+    "wxf5c23cb477dc7371"
+  ]
 }

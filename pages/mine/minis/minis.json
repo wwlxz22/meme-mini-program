@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "精品推荐"
+  "navigationBarTitleText": "精品推荐",
+  "usingComponents": {
+    "minis": "/components/minis/minis"
+  }
 }

@@ -1,0 +1,13 @@
+@import "../../common/common.wxss";
+
+.main {
+  width: 250rpx;
+  height: 280rpx;
+  background: white;
+}
+
+.icon {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+}
