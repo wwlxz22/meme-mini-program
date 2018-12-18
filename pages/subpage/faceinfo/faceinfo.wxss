@@ -41,33 +41,9 @@ page {
   height: 32rpx;
 }
 
-.func-title {
-}
-
 .func-tip {
   margin-top: 18rpx;
   font-family: PingFangSC;
   font-size: 24rpx;
   color: #a4a4a4;
-}
-
-.btn {
-  justify-content: center;
-  border-radius: 10px;
-  background-color: #ffb36c;
-  height: 80rpx;
-  align-self: center;
-  font-size: 28rpx;
-  color: #fff;
-}
-
-.btn::after {
-  border: none;
-}
-
-.txt {
-  align-self: center;
-  font-size: 26rpx;
-  color: #555;
-  margin-left: 75rpx;
 }

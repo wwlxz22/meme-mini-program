@@ -13,9 +13,12 @@
 
 <view class="menu-area flex-row">
   <view class='option-area flex-column items-center'>
-    <view class="option-title flex-column items-center justify-center {{ currentOption=='color' ? 'option-active': ''}}" bindtap='changeOption' data-option='color'>文字颜色</view>
-    <view class="option-title flex-column items-center justify-center {{ currentOption=='size' ? 'option-active': ''}}" bindtap='changeOption' data-option='size'>文字大小</view>
-    <view class="option-title flex-column items-center justify-center {{ currentOption=='typeset' ? 'option-active': ''}}" bindtap='changeOption' data-option='typeset'>文字排版</view>
+    <view class="option-title">文本样式</view>
+    <view class="flex-column item-center" style="flex: 1; margin-top: 24rpx; justify-content: space-between;">
+      <view class="option flex-column items-center justify-center {{ currentOption=='color' ? 'option-active': ''}}" bindtap='changeOption' data-option='color'>颜色</view>
+      <view class="option flex-column items-center justify-center {{ currentOption=='size' ? 'option-active': ''}}" bindtap='changeOption' data-option='size'>大小</view>
+      <view class="option flex-column items-center justify-center {{ currentOption=='typeset' ? 'option-active': ''}}" bindtap='changeOption' data-option='typeset'>排版</view>
+    </view>
   </view>
   <view class='value-area flex-row'>
     <block wx:for="{{colorList}}" wx:key="key" wx:if="{{currentOption=='color'}}">
@@ -30,5 +33,5 @@
   </view>
 </view>
 <view>
-  <button bindtap='generate' class='btn'>生成表情，发送给好友</button>
+  <button class='share' bindtap='generate'>生成表情，发送给好友</button>
 </view>

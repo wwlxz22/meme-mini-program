@@ -22,7 +22,10 @@ Page({
     path: '',
     display: 'none',
     currentOption: "color",
-    colorList: ["#000000", "#FFFFFF", "#191970", "#87CEEB", "#228B22", "#3CB371", "#FFFF00", "#4B0082", "#FFA500", "#DC143C", "#696969", "#FF1493", "#F5DEB3", "#FFB6C1", "#00FFFF", "#3CB371", "#FF0000", "#FF4500"],
+    colorList: ["#000000", "#4F4F4F", "#828282", "#BDBDBD", "#E0E0E0", "#F2F2F2",
+      "#DA615C", "#E69C59", "#ECC962", "#49935A", "#55AB68", "#87CC9B",
+      "#327CF6", "#4581E5", "#4F9BD6", "#76CAEE", "#B072D3", "#9159D9"
+    ],
     sizeList: [{
       name: "很小",
       value: "18"

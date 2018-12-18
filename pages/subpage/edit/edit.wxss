@@ -2,10 +2,9 @@
 @import "../../../common/common.wxss";
 
 .menu-area {
-  width: 750rpx;
-  height: 275rpx;
+  width: 650rpx;
+  height: 296rpx;
   margin-top: 15rpx;
-  background: white;
 }
 
 .option-area {
@@ -13,21 +12,32 @@
 }
 
 .option-title {
-  width: 180rpx;
-  flex: 1;
-  font-size: 34rpx;
-  border: solid 1rpx #f2f2f2;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  color: #c6c6c6;
+}
+
+.option {
+  width: 144rpx;
+  height: 64rpx;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  color: #a4a4a4;
 }
 
 .option-active {
-  color: green;
+  color: black;
+  border-radius: 42rpx;
+  background: #ffd748;
 }
 
 .value-area {
-  height: 275rpx;
-  flex: 1;
+  width: 476rpx;
+  height: 296rpx;
   flex-wrap: wrap;
   overflow: scroll;
+  background: white;
+  border-radius: 6rpx;
 }
 
 .edit {
@@ -35,12 +45,11 @@
 }
 
 .color-item {
-  width: 60rpx;
-  height: 60rpx;
-  margin-left: 30rpx;
-  margin-top: 18rpx;
-  border-radius: 50rpx;
-  border: solid black 1rpx;
+  width: 56rpx;
+  height: 56rpx;
+  margin-left: 16rpx;
+  margin-top: 30rpx;
+  border-radius: 50%;
 }
 
 .size-item {
@@ -114,22 +123,17 @@
   padding: 5px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 75rpx;
-  margin-top: 25rpx;
-  border-radius: 20px;
-  background-color: #2fcf19;
-  height: 80rpx;
-  width: 600rpx;
-  align-self: center;
+.share {
+  width: 650rpx;
+  height: 90rpx;
+  margin-top: 60rpx;
+  border-radius: 6rpx;
+  background-color: #ffd748;
+  font-family: PingFangSC;
   font-size: 28rpx;
-  color: #fff;
-  margin-bottom: 30rpx;
+  color: #000;
 }
 
-.btn::after {
+.share::after {
   border: none;
 }
