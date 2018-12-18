@@ -3,7 +3,8 @@
   <canvas canvas-id='my' style="width:{{picWidth}}px;height:{{picHeight}}px;"></canvas>
 </view>
 <view style=''>
-  <image src='{{raw}}' style="width:{{picWidth}}px;height:{{picHeight}}px"></image>
+  <image src='{{raw}}' class="face" />
+  <!-- style="width:{{picWidth}}px;height:{{picHeight}}px" -->
 </view>
 
 <view style='position:fixed;top:{{y}}px;left:{{x}}px;font-size:{{size}}px;color:{{color}};z-index:10000' bindtouchmove='move'>
@@ -33,5 +34,5 @@
   </view>
 </view>
 <view>
-  <button class='share' bindtap='generate'>生成表情，发送给好友</button>
+  <button class='share flex-center' bindtap='generate'>生成表情，发送给好友</button>
 </view>

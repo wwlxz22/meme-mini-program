@@ -1,6 +1,18 @@
 /* pages/edit/edit.wxss */
 @import "../../../common/common.wxss";
 
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.face {
+  width: 650rpx;
+  height: 650rpx;
+  margin-top: 40rpx;
+}
+
 .menu-area {
   width: 650rpx;
   height: 296rpx;
