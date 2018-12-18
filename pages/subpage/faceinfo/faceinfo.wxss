@@ -1,18 +1,54 @@
 /* pages/share/share.wxss */
 @import "../../../common/common.wxss";
 
-.image {
-  width: 700rpx;
-  height: 600rpx;
-  margin: 20rpx 25rpx;
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.fuction-area {
-  width: 700rpx;
-  height: 120rpx;
-  margin-left: 25rpx;
-  justify-content: space-around;
-  margin-bottom: 30rpx;
+.image {
+  width: 650rpx;
+  height: 650rpx;
+  margin-top: 40rpx;
+}
+
+.func-area {
+  width: 650rpx;
+  height: 142rpx;
+  margin-top: 32rpx;
+  justify-content: space-between;
+}
+
+.func-item {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 3px;
+  box-shadow: 0 8rpx 8rpx 0 rgba(239, 239, 239, 0.25);
+  background-color: #fff;
+}
+
+.func-share {
+  width: 252rpx;
+  height: 90rpx;
+  border-radius: 6rpx;
+  box-shadow: 0 8rpx 8rpx 0 rgba(239, 239, 239, 0.25);
+  background-color: #ffd748;
+}
+
+.func-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.func-title {
+}
+
+.func-tip {
+  margin-top: 18rpx;
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  color: #a4a4a4;
 }
 
 .btn {

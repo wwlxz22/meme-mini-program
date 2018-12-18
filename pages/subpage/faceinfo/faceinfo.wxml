@@ -1,15 +1,29 @@
 <!--pages/share/share.wxml-->
-<view>
-  <image src='{{src}}' class='image' mode='widthFix'></image>
-  <view class='fuction-area flex-row items-center'>
-    <view bindtap='battle' class='flex-row items-center btn' style='width: 320rpx;'>直接发送，与好友斗图</view>
-    <!-- <view bindtap='edit' class='flex-row items-center btn' style="width: 240rpx;" wx:if="{{diyType!=0}}">自定义表情文字</view> -->
-    <view bindtap='edit' class='flex-row items-center btn' style="width: 240rpx;">自定义表情文字</view>
-    <view class="flex-row items-center justify-center" style='width: 80rpx; height: 80rpx; background-color: #ffb36c; border-radius: 10px;' bindtap='addFavorite'>
-      <image style='width: 60rpx; height: 60rpx;' src='/images/icon/like.png' wx:if="{{isFavorite == 0}}" />
-      <image style='width: 60rpx; height: 60rpx;' src='/images/icon/like_fill.png' wx:else/>
+<image src='{{src}}' class='image' mode='widthFix'></image>
+<view class='func-area flex-row items-center'>
+  <view class="flex-column items-center" bindtap="battle">
+    <view class="func-share flex-center">
+      <image class="func-icon" src="/images/icon/share.png" />
+      <view style="font-family: PingFangSC; font-size: 24rpx; color: #615426; margin-left: 18rpx;">直接转发</view>
+    </view>
+    <view class="func-tip">点击按钮后长按图片</view>
+  </view>
+  <view class="flex-row" style="flex: 1; justify-content: flex-end;">
+    <view class="flex-column items-center" style="margin-right: 40rpx;" bindtap="edit" wx:if="{{diyType==0}}">
+      <view class="func-item flex-center">
+        <image class="func-icon" src="/images/icon/edit.png" />
+      </view>
+      <view class="func-tip">可编辑</view>
+    </view>
+    <view class="flex-column items-center">
+      <view class="func-item flex-center" bindtap='addFavorite'>
+        <image class="func-icon" src="/images/icon/like.png" wx:if="{{isFavorite == 0}}" />
+        <image class="func-icon" src="/images/icon/like_fill.png" wx:else />
+      </view>
+      <view class="func-tip">待收藏</view>
     </view>
   </view>
 </view>
+
 <!-- <button bindtap='pay'>支付</button> -->
 <ad style="position: fixed; bottom: 0; left: 0;" unit-id="adunit-c00ee437f3e39ec8"></ad>
