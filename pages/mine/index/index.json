@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "我",
+  "disableScroll": true,
   "usingComponents": {
     "menu-item": "/components/menu-item/menu-item",
     "line": "/components/line/line",

@@ -10,12 +10,10 @@
 <!-- 菜单区域 -->
 <view class="menu-area flex-column items-center">
   <menu-item url="/pages/mine/favorites/favorites" icon="/images/icon/favorite.png" title="我的收藏" />
-  <line lheight="2" lwidth="700" lcolor="#e2e2e2" />
   <menu-item url="/pages/mine/minis/minis" icon="/images/icon/minis.png" title="精品推荐" />
-  <line lheight="3" lwidth="700" lcolor="#e2e2e2" />
   <menu-item url="/pages/mine/feedback/feedback" icon="/images/icon/feedback.png" title="反馈建议" />
 </view>
 
 <!-- 分享 -->
-<button class="share-btn flex-row items-center justify-center pingfangsc-m" open-type='share'>分享给好友</button>
-<copyright />
+<button class="share flex-row items-center justify-center pingfangsc-m" open-type='share'>分享给好友</button>
+<copyright class="copyright" />

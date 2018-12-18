@@ -1,8 +1,6 @@
 /* components/items/copyright/copyright.wxss */
 
 .container {
-  position: fixed;
-  bottom: 20rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/mine/index/index",
     "pages/index/index/index",
     "pages/index/search/search",
     "pages/category/category",
-    "pages/mine/index/index",
     "pages/mine/favorites/favorites",
     "pages/mine/feedback/feedback",
     "pages/mine/minis/minis",

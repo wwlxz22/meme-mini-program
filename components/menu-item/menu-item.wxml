@@ -1,7 +1,4 @@
-<navigator class="menu-item flex-row items-center" url='{{url}}'>
-  <image class="menu-item-icon" src='{{icon}}' />
-  <view class='menu-title-wrap flex-row items-center pingfangsc-m'>
-    <text>{{title}}</text>
-    <image class="menu-next-icon" src='/images/icon/right.png' />
-  </view>
+<navigator class="main flex-row items-center" url='{{url}}'>
+  <image class="icon" src='{{icon}}' />
+  <text class="title">{{title}}</text>
 </navigator>

@@ -1,21 +1,27 @@
 @import "../../../common/common.wxss";
 
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .info-area {
   width: 750rpx;
-  height: 300rpx;
+  height: 362rpx;
   background: white;
 }
 
 .avatar-wrap {
-  width: 150rpx;
-  height: 150rpx;
-  border-radius: 50%;
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 72rpx;
   overflow: hidden;
 }
 
 .avatar {
-  width: 150rpx;
-  height: 150rpx;
+  width: 144rpx;
+  height: 144rpx;
   z-index: 99999;
 }
 
@@ -25,15 +31,32 @@
 }
 
 .menu-area {
-  width: 750rpx;
-  margin-top: 25rpx;
+  width: 650rpx;
+  height: 360rpx;
+  margin-top: 50rpx;
   background: white;
+  border-radius: 6rpx;
+  overflow: hidden;
 }
 
-.share-btn {
+.share {
   width: 650rpx;
-  height: 100rpx;
-  margin-top: 250rpx;
-  background: red;
-  color: white;
+  height: 120rpx;
+  margin-top: 62rpx;
+  border-radius: 6rpx;
+  border: 0rpx;
+  box-shadow: 0 4px 4px 0 rgba(239, 239, 239, 0.25);
+  background-color: #fff;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.share::after {
+  border: 0;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 20rpx;
 }
