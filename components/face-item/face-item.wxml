@@ -1,7 +1,7 @@
-<view class='face-item flex-column'>
-  <image class="face-image" src="{{full}}" bindtap="_navigateToShare" />
-  <!-- <view class='tag-wrap flex-row items-center'>
-    <view class='face-tag' style="background: blue;" wx:if="{{isgif==1}}">GIF</view>
-    <view class='face-tag' style="background: green;" wx:if="{{diytype!=0}}">DIY</view>
-  </view> -->
+<view class='main'>
+  <view class="image-wrap flex-center">
+    <image class="image" src="{{full}}" bindtap="_navigateToShare" />
+  </view>
+  <image class="tag" src="/images/icon/tag_diy.png" wx:if="{{diytype!=0}}" />
+  <image class="tag" src="/images/icon/tag_gif.png" wx:if="{{isgif==1}}" />
 </view>

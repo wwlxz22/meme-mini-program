@@ -43,8 +43,8 @@
 }
 
 .face-item {
-  width: 220rpx;
-  height: 220rpx;
+  width: 190rpx;
+  height: 190rpx;
   margin-left: 20rpx;
   margin-top: 12rpx;
   display: inline-flex;

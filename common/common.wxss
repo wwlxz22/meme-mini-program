@@ -12,6 +12,13 @@ page {
   flex-direction: column;
 }
 
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .justify-center {
   justify-content: center;
 }
