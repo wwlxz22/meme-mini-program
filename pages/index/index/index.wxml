@@ -3,14 +3,10 @@
 <loading wx:if="{{showLoading}}">加载中</loading>
 <view class='top'>
   <!-- 搜索 -->
-  <view class="weui-search-bar">
-    <view class="weui-search-bar__form">
-      <view class="weui-search-bar__box">
-        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-        <input type="text" value="{{initKey}}" class="weui-search-bar__input" placeholder="搜索表情包" bindconfirm="search" confirm-type="search"></input>
-      </view>
-    </view>
+  <view class="search-area">
+
   </view>
+
 
   <!-- 最新/最热 -->
   <view class="tab-area flex-row" style='justify-content: space-around; background: white;'>
