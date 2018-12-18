@@ -1,6 +1,38 @@
 @import "../../../common/common.wxss";
 @import "../../../template/footer/footer.wxss";
 
+.tab-area {
+  height: 88rpx;
+  width: 750rpx;
+}
+
+.tab-item {
+  flex: 1;
+  height: 88rpx;
+  justify-content: space-between;
+}
+
+.tab-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 10rpx;
+}
+
+.tab-title {
+  margin-left: 4rpx;
+  margin-top: 10rpx;
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.tab-line {
+  width: 80rpx;
+  height: 6rpx;
+  bottom: 0;
+  background-color: #ffd748;
+}
+
 .list-area {
   width: 750rpx;
   display: flex;

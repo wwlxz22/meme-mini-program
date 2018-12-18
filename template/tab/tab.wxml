@@ -1,0 +1,9 @@
+<template name="tab">
+  <view class="tab-item flex-column items-center">
+    <view class="flex-row">
+      <image class="tab-icon" src="{{url}}" />
+      <view class="tab-title">{{title}}</view>
+    </view>
+    <view class="tab-line" wx:if="{{currentType == 'hottest'}}" />
+  </view>
+</template>

@@ -11,10 +11,37 @@
       </view>
     </view>
   </view>
+
   <!-- 最新/最热 -->
-  <view class="flex-row" style='justify-content: space-around; background: white;'>
-    <view class="item {{currentType == 'newest' ? 'active':''}}" bindtap='changeType' data-type='newest'>最新</view>
-    <view class="item {{currentType == 'hottest' ? 'active':''}}" bindtap='changeType' data-type='hottest'>最热</view>
+  <view class="tab-area flex-row" style='justify-content: space-around; background: white;'>
+    <view class="tab-item flex-column items-center" bindtap="changeType" data-type="hottest">
+      <view class="flex-row justify-center">
+        <image class="tab-icon" src="/images/icon/hottest.png" />
+        <view class="tab-title">最热</view>
+      </view>
+      <view class="tab-line" wx:if="{{currentType == 'hottest'}}" />
+    </view>
+    <view class="tab-item flex-column items-center" bindtap="changeType" data-type="newest">
+      <view class="flex-row justify-center">
+        <image class="tab-icon" src="/images/icon/newest.png" />
+        <view class="tab-title">最新</view>
+      </view>
+      <view class="tab-line" wx:if="{{currentType == 'newest'}}" />
+    </view>
+    <view class="tab-item flex-column items-center" bindtap="changeType" data-type="gif">
+      <view class="flex-row justify-center">
+        <image class="tab-icon" src="/images/icon/gif.png" />
+        <view class="tab-title">动态</view>
+      </view>
+      <view class="tab-line" wx:if="{{currentType == 'gif'}}" />
+    </view>
+    <view class="tab-item flex-column items-center" bindtap="changeType" data-type="editable">
+      <view class="flex-row justify-center">
+        <image class="tab-icon" src="/images/icon/editable.png" />
+        <view class="tab-title">自定义</view>
+      </view>
+      <view class="tab-line" wx:if="{{currentType == 'editable'}}" />
+    </view>
   </view>
 </view>
 
