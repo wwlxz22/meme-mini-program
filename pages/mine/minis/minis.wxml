@@ -1,5 +1,5 @@
 <view class="minis-wrap flex-row">
   <minis class="minis" title="捏捏宠" url="/images/minis/nieniepet.jpeg" path="/pages/index/index" appid="wxb10e8fd6be9a8ffc" />
-  <minis class="minis" title="平板支撑Plank" url="/images/minis/plank.jpeg" path="/pages/index/index" appid="wx4b3e763b32874fab" />
+  <minis class="minis" title="Plank" url="/images/minis/plank.jpeg" path="/pages/index/index" appid="wx4b3e763b32874fab" />
   <minis class="minis" title="广场舞" url="/images/minis/guangchangwu.jpeg" path="/pages/index/index" appid="wxf5c23cb477dc7371" />
 </view>

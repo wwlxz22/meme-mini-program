@@ -9,7 +9,7 @@
 
 <!-- 菜单区域 -->
 <view class="menu-area flex-column items-center">
-  <menu-item url="/pages/mine/favorites/favorites" icon="/images/icon/favorite.png" title="我的收藏" />
+  <menu-item url="/pages/mine/favorites/favorites" icon="/images/icon/favorites.png" title="我的收藏" />
   <menu-item url="/pages/mine/minis/minis" icon="/images/icon/minis.png" title="精品推荐" />
   <menu-item url="/pages/mine/feedback/feedback" icon="/images/icon/feedback.png" title="反馈建议" />
 </view>

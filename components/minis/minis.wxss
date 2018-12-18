@@ -1,13 +1,19 @@
 @import "../../common/common.wxss";
 
 .main {
-  width: 250rpx;
-  height: 280rpx;
-  background: white;
+  width: 130rpx;
+  height: 170rpx;
 }
 
 .icon {
-  width: 200rpx;
-  height: 200rpx;
-  margin-top: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.title {
+  margin-top: 30rpx;
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  color: #000;
 }
