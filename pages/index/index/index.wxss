@@ -1,12 +1,12 @@
 @import "../../../common/common.wxss";
 @import "../../../template/footer/footer.wxss";
 
-.search-area {
-  width: 650rpx;
+.search-bar {
+  /* width: 650rpx;
   height: 88rpx;
   border-radius: 6rpx;
   box-shadow: 0 8rpx 8rpx 0 rgba(239, 239, 239, 0.25);
-  background-color: #fff;
+  background-color: #fff; */
 }
 
 .tab-area {

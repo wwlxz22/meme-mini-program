@@ -2,6 +2,7 @@
   "navigationBarTitleText": "表情包斗图",
   "disableScroll": true,
   "usingComponents": {
-    "face-item": "/components/face-item/face-item"
+    "face-item": "/components/face-item/face-item",
+    "search": "/components/search/search"
   }
 }

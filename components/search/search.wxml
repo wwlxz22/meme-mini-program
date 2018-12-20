@@ -1,0 +1,11 @@
+<view class="container flex-center">
+  <view class="main flex-row items-center">
+    <view class="left-wrap flex-center">
+      <view>搜索</view>
+    </view>
+    <input class="input" />
+    <view class="rihgt-wrap">
+      <image class="right" src="/images/icon/search.png" />
+    </view>
+  </view>
+</view>
