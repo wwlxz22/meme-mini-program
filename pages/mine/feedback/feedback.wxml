@@ -1,11 +1,9 @@
 <form bindsubmit="feedback">
-  <view class="feedback-item flex-column">
-    <view class="feedback-title">反馈标题</view>
-    <input class="feedback-input" type="text" name="title" placeholder="请输入反馈的标题" placeholder-class="placeholder" />
+  <view class="form">
+    <text class="title t1">反馈标题</text>
+    <input class="subject" type="text" name="title" />
+    <view class="title t2">反馈内容</view>
+    <textarea class="content" name="content" />
+    <button class="submit flex-row items-center justify-center" form-type="submit">提交</button>
   </view>
-  <view class="feedback-item flex-column">
-    <view class="feedback-title">反馈内容</view>
-    <textarea class="feedback-input" name="content" placeholder="请输入反馈的内容" placeholder-class="placeholder" />
-  </view>
-  <button class="submit flex-row items-center justify-center" form-type="submit">提交</button>
 </form>

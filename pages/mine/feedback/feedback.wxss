@@ -1,44 +1,52 @@
 @import "../../../common/common.wxss";
 
-.feedback-item {
-  width: 700rpx;
-  margin-top: 25rpx;
-  margin-left: 25rpx;
-  background: #fff;
-  padding-bottom: 30rpx;
+.form {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.feedback-title {
-  margin-top: 26rpx;
-  margin-left: 30rpx;
-  font-family: PingFangSC-Medium;
-  font-size: 32rpx;
-  color: #333;
-  text-align: justify;
-  line-height: 32rpx;
+.title {
+  width: 610rpx;
+  font-family: PingFangSC;
+  font-size: 34rpx;
+  color: #6a6d76;
 }
 
-.feedback-input {
-  padding-top: 30rpx;
-  padding-left: 30rpx;
+.t1 {
+  margin-top: 40rpx;
 }
 
-.placeholder {
-  width: 320rpx;
-  font-family: PingFangSC-Regular;
-  font-size: 32rpx;
-  color: #999;
-  text-align: justify;
-  line-height: 32rpx;
+.t2 {
+  margin-top: 60rpx;
+}
+
+.subject {
+  width: 610rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+  border-radius: 12px;
+  background-color: white;
+  color: white;
+}
+
+.content {
+  width: 610rpx;
+  height: 520rpx;
+  margin-top: 20rpx;
+  border-radius: 24rpx;
+  background-color: white;
+  color: white;
 }
 
 .submit {
-  margin-top: 60rpx;
-  background: red;
-  font-family: PingFangSC-Regular;
-  font-size: 18px;
-  color: white;
-  text-align: center;
-  width: 700rpx;
-  height: 88rpx;
+  width: 610rpx;
+  height: 90rpx;
+  margin-top: 80rpx;
+  border-radius: 12rpx;
+  background-color: #f92974;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  color: #fff;
 }
