@@ -20,7 +20,7 @@
 .tag {
   width: 32rpx;
   height: 32rpx;
-  position: fixed;
+  position: absolute;
   margin-top: -190rpx;
   margin-left: 160rpx;
 }
