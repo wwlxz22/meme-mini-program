@@ -46,6 +46,7 @@
   display: flex;
   margin-top: 80px;
   padding-top: 15rpx;
+  padding-left: 5rpx;
   flex-direction: row;
   flex-wrap: row wrap;
 }
@@ -53,8 +54,8 @@
 .face-item {
   width: 190rpx;
   height: 190rpx;
-  margin-left: 20rpx;
-  margin-top: 12rpx;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
   display: inline-flex;
   border-radius: 15rpx;
   overflow: hidden;
