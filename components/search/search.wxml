@@ -1,11 +1,13 @@
 <view class="container flex-center">
   <view class="main flex-row items-center">
     <view class="left-wrap flex-center">
-      <view>搜索</view>
+      <image class="right" wx:if="{{content}}" src="/images/icon/clear.png" bindtap="__clear" />
+      <view wx:else>搜索</view>
     </view>
-    <input class="input" />
-    <view class="rihgt-wrap">
+    <input class="input" bindfocus="__onFocus" bindblur='__onBlur' bindinput="__onInput" bindconfirm="__search" value="{{content}}" />
+    <view class="right-wrap flex-center" bindtap="__search">
       <image class="right" src="/images/icon/search.png" />
     </view>
   </view>
 </view>
+<view class="mask" hidden="{{!showMask}}" catchtouchmove="__catchTouchMove" bindtap="__catchTouchMove" />
