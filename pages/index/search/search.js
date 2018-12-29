@@ -90,6 +90,7 @@ Page({
     that.setData({
       initKey: key
     });
+    that.selectComponent('#search-bar').setContent(key);
     that.searchCall(key);
   },
 

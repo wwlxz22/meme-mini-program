@@ -5,7 +5,6 @@ Component({
    */
   properties: {
     maskTop: Number,
-    content: String,
   },
 
   /**
@@ -13,12 +12,24 @@ Component({
    */
   data: {
     showMask: false,
+    content: "",
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+
+    /**
+     * 设置内容
+     * @param {*} content 
+     */
+    setContent: function (content = "") {
+      let that = this;
+      that.setData({
+        content: content
+      });
+    },
 
     /**
      * 搜索

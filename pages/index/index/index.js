@@ -108,9 +108,7 @@ Page({
    */
   onShow: function () {
     let that = this;
-    that.setData({
-      initKey: ""
-    })
+    that.selectComponent('#search-bar').setContent("");
   },
 
   jumpToShare: function (e) {
