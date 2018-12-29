@@ -8,13 +8,14 @@ Page({
    */
   data: {
     initKey: "",
-    faceList: []
+    faceList: [],
+    type: "face", // 搜索类型 face tag
   },
 
   /**
    * 加载更多
    */
-  loadMore: function() {
+  loadMore: function () {
     let that = this;
     that.searchCall(that.data.initKey, that.data.pageNo);
   },
@@ -22,7 +23,7 @@ Page({
   /**
    * 搜索
    */
-  search: function(e) {
+  search: function (e) {
     console.info(" [ index.js ] ================= search >>>>>> e = ", e);
     let that = this,
       data = e.detail.key;
@@ -42,9 +43,9 @@ Page({
   /**
    * 调用搜索
    */
-  searchCall: function(key, pageNo = 1) {
+  searchCall: function (key, pageNo = 1) {
     let that = this;
-    apiFuncs.search(key, pageNo).then(res => {
+    apiFuncs.search(key, that.data.type, pageNo).then(res => {
       console.info(" [ index.js ] ============== search >>>>> = res = ", res);
       if (res.data.length > 0) {
         let newList = [];
@@ -75,13 +76,13 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     console.info(" [search.js ] =============== onLoad >>>>> options = ", options);
     let that = this,
       key = options.key;
     // 获取屏幕高度
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         that.setData({
           height: res.windowHeight - 80
         })
@@ -97,7 +98,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     return funcs.getShareData();
   }
 })
