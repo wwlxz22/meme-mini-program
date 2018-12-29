@@ -1,6 +1,6 @@
 <import src="/template/footer/footer.wxml" xmlns:wx="http://www.w3.org/1999/xhtml" />
 
-<loading wx:if="{{showLoading}}">加载中</loading>
+<!-- <loading wx:if="{{showLoading}}">加载中</loading> -->
 <view class='top'>
   <!-- 搜索 -->
   <search class="search-bar" maskTop="80"/>

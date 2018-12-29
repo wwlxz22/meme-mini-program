@@ -4,7 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    maskTop: Number
+    maskTop: Number,
+    content: String,
   },
 
   /**
@@ -12,7 +13,6 @@ Component({
    */
   data: {
     showMask: false,
-    content: ""
   },
 
   /**
@@ -25,6 +25,13 @@ Component({
      */
     __search: function () {
       let that = this;
+      if (!that.data.content) {
+        wx.showToast({
+          title: "请输入要搜索的内容",
+          icon: "none"
+        });
+        return;
+      }
       wx.navigateTo({
         url: "/pages/index/search/search?key=" + that.data.content
       });
