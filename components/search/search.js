@@ -32,11 +32,9 @@ Component({
         });
         return;
       }
-      wx.navigateTo({
-        url: "/pages/index/search/search?key=" + that.data.content
-      });
-      that.setData({
-        content: ""
+      // 发送数据到父页面
+      that.triggerEvent('doSearch', {
+        key: that.data.content
       });
     },
 

@@ -25,7 +25,7 @@ Page({
   search: function(e) {
     console.info(" [ index.js ] ================= search >>>>>> e = ", e);
     let that = this,
-      data = e.detail.value;
+      data = e.detail.key;
     if (!data) {
       wx.showToast({
         title: '请输入要搜索的内容',

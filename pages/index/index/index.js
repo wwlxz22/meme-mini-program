@@ -20,25 +20,19 @@ Page({
   /**
    * 搜索
    */
-  search: function(e) {
+  search: function (e) {
     console.info(" [ index.js ] ================= search >>>>>> e = ", e);
-    let data = e.detail.value;
-    if (!data) {
-      wx.showToast({
-        title: '请输入要搜索的内容',
-        icon: "none"
-      });
-      return;
-    }
+    let data = e.detail.key;
+    console.info(" [ index.js ] ================= search >>>>>> data = ", data);
     wx.navigateTo({
-      url: '/pages/index/search/search?key=' + data,
+      url: "/pages/index/search/search?key=" + data
     });
   },
 
   /**
    * 加载更多
    */
-  loadMore: function(e) {
+  loadMore: function (e) {
     let that = this;
     that.getFaceList(that.data.currentType, that.data.pageNo);
   },
@@ -87,7 +81,7 @@ Page({
   /** 
    * 修改分类
    */
-  changeType: function(e) {
+  changeType: function (e) {
     console.info(" [ index.js ] ============= changeType >>>>> e = ", e);
     let that = this,
       data = e.currentTarget.dataset;
@@ -97,10 +91,10 @@ Page({
     that.getFaceList(data.type, 1);
   },
 
-  onLoad: function() {
+  onLoad: function () {
     let that = this;
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         that.setData({
           height: res.windowHeight - 80
         })
@@ -112,14 +106,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     let that = this;
     that.setData({
       initKey: ""
     })
   },
 
-  jumpToShare: function(e) {
+  jumpToShare: function (e) {
     let [that, raw, src, faceId] = [this, e.currentTarget.dataset.raw, e.currentTarget.dataset.src, e.currentTarget.dataset.faceid];
     console.info(" raw = ", raw);
     console.info(" src = ", src);
@@ -127,7 +121,8 @@ Page({
       url: '/pages/subpage/share/share?src=' + src + '&raw=' + raw + "$faceId=" + faceId,
     })
   },
-  getmore: function() {
+
+  getmore: function () {
     this.setData({
       pageNo: this.data.pageNo + 1
     });
@@ -141,7 +136,7 @@ Page({
         start: that.data.pageNo,
         cate_id: that.data.cate_id
       },
-      success: function(res) {
+      success: function (res) {
         //console.log(res.data)
         if (res.data.data.length == 0) {
           wx.showToast({

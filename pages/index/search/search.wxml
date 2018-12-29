@@ -1,5 +1,5 @@
 <view class='search-area'>
-  <search class="search-bar" maskTop="40" content="{{initKey}}" />
+  <search class="search-bar" maskTop="40" content="{{initKey}}" binddoSearch="search"/>
 </view>
 <scroll-view scroll-y class='list-area flex-row items-center' style='height:{{height}}px;' enable-back-to-top bindscrolltolower="loadMore">
   <view>
