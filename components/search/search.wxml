@@ -10,4 +10,4 @@
     </view>
   </view>
 </view>
-<view class="mask" hidden="{{!showMask}}" catchtouchmove="__catchTouchMove" bindtap="__catchTouchMove" />
+<view class="mask" style="top: {{maskTop}}px" hidden="{{!showMask}}" catchtouchmove="__catchTouchMove" bindtap="__catchTouchMove" />
