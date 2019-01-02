@@ -12,9 +12,14 @@
   </view>
 </view>
 <scroll-view scroll-y class='list-area flex-row items-center' style='height:{{height}}px;' enable-back-to-top bindscrolltolower="loadMore">
-  <view>
+  <view wx:if="{{searchType == 'face'}}">
     <block wx:for="{{faceList}}" wx:for-item="item" wx:key="key">
       <face-item class="face-item" raw="{{item.raw_url}}" full="{{item.full_url}}" faceid="{{item.face_id}}" isgif="{{item.is_gif}}" diytype="{{item.diy_type}}" />
+    </block>
+  </view>
+  <view wx:else>
+    <block wx:for="{{tagList}}" wx:key="key" >
+      <view>{{item.name}}</view>
     </block>
   </view>
 </scroll-view>
