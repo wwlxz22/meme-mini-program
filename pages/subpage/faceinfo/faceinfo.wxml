@@ -9,7 +9,7 @@
     <view class="func-tip">点击按钮后长按图片</view>
   </view>
   <view class="flex-row" style="flex: 1; justify-content: flex-end;">
-    <view class="flex-column items-center" style="margin-right: 40rpx;" bindtap="edit" wx:if="{{diyType==0}}">
+    <view class="flex-column items-center" style="margin-right: 40rpx;" bindtap="edit" wx:if="{{diyType!=0}}">
       <view class="func-item flex-center">
         <image class="func-icon" src="/images/icon/edit.png" />
       </view>
