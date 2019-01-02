@@ -1,14 +1,18 @@
 @import "../../common/common.wxss";
 
-.category-area {
+.tag-area {
   width: 100%;
   flex-wrap: wrap;
   padding: 25rpx 15rpx 25rpx 10rpx;
 }
 
-.category-item {
+.category{
+  width: 750rpx;
+}
+
+.tag-item {
   margin: 10rpx 10rpx 15rpx 10rpx;
-  border-radius: 15rpx;
+  border-radius: 14rpx;
   overflow: hidden;
-  border: solid #e2e2e2 1rpx;
+  border: solid #e2e2e2 1rpx
 }
