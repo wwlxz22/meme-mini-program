@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index/index",
-    "pages/mine/minis/minis",
-    "pages/mine/index/index",
     "pages/index/search/search",
     "pages/category/category",
     "pages/mine/favorites/favorites",
     "pages/mine/feedback/feedback",
+    "pages/mine/minis/minis",
+    "pages/mine/index/index",
     "pages/subpage/list/list",
     "pages/subpage/faceinfo/faceinfo",
     "pages/subpage/edit/edit"

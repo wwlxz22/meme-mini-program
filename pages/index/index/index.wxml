@@ -6,19 +6,19 @@
   <search id="search-bar" class="search-bar" maskTop="80" binddoSearch="search"/>
   <!-- 最新/最热 -->
   <view class="tab-area flex-row" style='justify-content: space-around; background: white;'>
-    <view class="tab-item flex-column items-center" bindtap="changeType" data-type="hottest">
-      <view class="flex-row justify-center">
-        <image class="tab-icon" src="/images/icon/hottest.png" />
-        <view class="tab-title">最热</view>
-      </view>
-      <view class="tab-line" wx:if="{{currentType == 'hottest'}}" />
-    </view>
     <view class="tab-item flex-column items-center" bindtap="changeType" data-type="newest">
       <view class="flex-row justify-center">
         <image class="tab-icon" src="/images/icon/newest.png" />
         <view class="tab-title">最新</view>
       </view>
       <view class="tab-line" wx:if="{{currentType == 'newest'}}" />
+    </view>
+    <view class="tab-item flex-column items-center" bindtap="changeType" data-type="hottest">
+      <view class="flex-row justify-center">
+        <image class="tab-icon" src="/images/icon/hottest.png" />
+        <view class="tab-title">最热</view>
+      </view>
+      <view class="tab-line" wx:if="{{currentType == 'hottest'}}" />
     </view>
     <view class="tab-item flex-column items-center" bindtap="changeType" data-type="gif">
       <view class="flex-row justify-center">
