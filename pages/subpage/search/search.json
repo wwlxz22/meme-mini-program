@@ -2,6 +2,7 @@
   "navigationBarTitleText": "搜索",
   "usingComponents": {
     "face-item": "/components/face-item/face-item",
-    "search-bar": "/components/search-bar/search-bar"
+    "search-bar": "/components/search-bar/search-bar",
+    "category-item": "/components/category-item/category-item"
   }
 }

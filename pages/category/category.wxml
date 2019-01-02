@@ -4,9 +4,7 @@
     <block wx:for="{{categoryList}}" wx:for-item="tag" wx:key="key">
       <view class="category flex-center">{{tag.name}}</view>
       <block wx:for="{{tag.tags}}" wx:for-item="item" wx:key="key">
-        <category-item class="tag-item" cid="{{item.category_id}}" cover="{{item.cover}}" title="{{item.tag_name}}">
-          {{item.name}}
-        </category-item>
+        <category-item class="tag-item" cid="{{item.category_id}}" cover="{{item.cover}}" title="{{item.tag_name}}" />
       </block>
     </block>
   </view>

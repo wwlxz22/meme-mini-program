@@ -18,8 +18,8 @@
     </block>
   </view>
   <view wx:else>
-    <block wx:for="{{tagList}}" wx:key="key" >
-      <view>{{item.name}}</view>
+    <block wx:for="{{tagList}}" wx:key="key">
+      <category-item class="tag-item" cid="{{item.category_id}}" cover="{{item.cover}}" title="{{item.name}}" />
     </block>
   </view>
 </scroll-view>
