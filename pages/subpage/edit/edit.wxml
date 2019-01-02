@@ -23,13 +23,13 @@
   </view>
   <view class='value-area flex-row'>
     <block wx:for="{{colorList}}" wx:key="key" wx:if="{{currentOption=='color'}}">
-      <view class='color-item' bindtap='changeColor' data-color='{{item}}' style="background: {{item}}" />
+      <view class="color-item {{ currentColor == index? 'color-active' : ''}}" bindtap='changeColor' data-color='{{item}}' data-index="{{index}}" style="background: {{item}}" />
     </block>
     <block wx:for="{{sizeList}}" wx:key="key" wx:if="{{currentOption=='size'}}">
-      <view class='size-item flex-row items-center justify-center' bindtap='changeSize' data-size='{{item.value}}'>{{item.name}}</view>
+      <view class="text-item {{ currentSize == index? 'text-active' : ''}}" flex-row items-center justify-center bindtap='changeSize' data-size='{{item.value}}' data-index="{{index}}">{{item.name}}</view>
     </block>
     <block wx:for="{{typesetList}}" wx:key="key" wx:if="{{currentOption=='typeset'}}">
-      <view class='typeset-item flex-row items-center justify-center' bindtap='changeTypeset' data-value='{{item.value}}'>{{item.name}}</view>
+      <view class="text-item {{ currentTypeset == index? 'text-active' : ''}}" flex-row items-center justify-center bindtap='changeTypeset' data-value='{{item.value}}' data-index="{{index}}">{{item.name}}</view>
     </block>
   </view>
 </view>

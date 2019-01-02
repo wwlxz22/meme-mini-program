@@ -50,6 +50,7 @@ page {
   overflow: scroll;
   background: white;
   border-radius: 6rpx;
+  align-content:flex-start;
 }
 
 .edit {
@@ -64,16 +65,26 @@ page {
   border-radius: 50%;
 }
 
-.size-item {
-  width: 100%;
-  height: 80rpx;
-  border-top: solid 1rpx #f2f2f2;
+.color-active{
+  width: 42rpx;
+  height: 42rpx;
+  border: solid 8rpx #ffd748;
 }
 
-.typeset-item {
-  width: 100%;
-  height: 125rpx;
-  border-top: solid 1rpx #f2f2f2;
+.text-item{
+  width: 72rpx;
+  height: 56rpx;
+  margin: 60rpx 5rpx 0 60rpx;
+  font-family: PingFangSC;
+  display: inline-block;
+  font-size: 36rpx;
+  line-height: 1.56;
+  color: #a4a4a4;
+}
+
+.text-active{
+  border-bottom: solid 6rpx #ffd748;
+  color: #000;
 }
 
 .color {

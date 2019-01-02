@@ -49,12 +49,15 @@ Page({
       name: "双行",
       value: "double"
     }],
+    currentColor: 0,
+    currentSize: 0,
+    currentTypeset: 0
   },
 
   /**
    * 修改类型
    */
-  changeOption: function(e) {
+  changeOption: function (e) {
     console.info(" [ edit.js ] ================ changeOption >>>>> e = ", e);
     let that = this,
       data = e.currentTarget.dataset;
@@ -66,7 +69,7 @@ Page({
   /**
    * 第一行文字
    */
-  inputLine1: function(res) {
+  inputLine1: function (res) {
     this.setData({
       line1: res.detail.value
     });
@@ -75,26 +78,26 @@ Page({
   /**
    * 第二行文字
    */
-  inputLine2: function(e) {
+  inputLine2: function (e) {
     this.setData({
       line2: e.detail.value
     });
   },
 
-  onLoad: function(options) {
+  onLoad: function (options) {
     let that = this;
     this.setData({
       raw: options.raw
     });
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         that.setData({
           windowWidth: res.windowWidth,
           windowHeight: res.windowHeight
         })
         wx.getImageInfo({
           src: options.raw,
-          success: function(res) {
+          success: function (res) {
             that.setData({
               picHeight: res.height * that.data.windowWidth / res.width,
               picWidth: that.data.windowWidth,
@@ -110,14 +113,14 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
     if (wx.getStorageSync('has_gen')) {
       let that = this;
       const ctx = wx.createCanvasContext('my');
@@ -131,39 +134,39 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     return funcs.getShareData();
   },
 
-  move: function(e) {
+  move: function (e) {
     //console.log(e);
     let [x, y] = [e.touches[0].pageX, e.touches[0].pageY];
     if (x < 20) x = 20;
@@ -178,35 +181,38 @@ Page({
   /**
    * 修改文字大小
    */
-  changeSize: function(e) {
-    let size = e.currentTarget.dataset.size;
+  changeSize: function (e) {
+    let data = e.currentTarget.dataset;
     this.setData({
-      size: size
+      size: data.size,
+      currentSize: data.index
     });
   },
 
   /**
    * 修改文字颜色
    */
-  changeColor: function(e) {
-    let color = e.currentTarget.dataset.color;
+  changeColor: function (e) {
+    let data = e.currentTarget.dataset;
     this.setData({
-      color: color
+      color: data.color,
+      currentColor: data.index
     });
   },
 
   /**
    * 修改文字排版
    */
-  changeTypeset: function(e) {
+  changeTypeset: function (e) {
     let that = this,
       data = e.currentTarget.dataset;
     that.setData({
-      typeset: data.value
-    })
+      typeset: data.value,
+      currentTypeset: data.index
+    });
   },
 
-  generate: function() {
+  generate: function () {
     // let that = this;
     let fontColor = this.data.color;
     if (!this.data.line1) {
@@ -243,7 +249,7 @@ Page({
         destWidth: that.data.picWidth,
         destHeight: that.data.picHeight,
         canvasId: 'my',
-        success: function(res) {
+        success: function (res) {
           console.log(res.tempFilePath + '-------')
           wx.previewImage({
             urls: [res.tempFilePath],
