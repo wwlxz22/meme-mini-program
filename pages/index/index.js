@@ -2,8 +2,8 @@
 //获取应用实例
 let url = "https://www.xiaochongleyuan.com/api";
 const app = getApp();
-const apiFuncs = require("../../../utils/apiFuncs.js");
-const funcs = require("../../../utils/funcs.js");
+const apiFuncs = require("../../utils/apiFuncs.js");
+const funcs = require("../../utils/funcs.js");
 
 Page({
   data: {
@@ -25,7 +25,7 @@ Page({
     let data = e.detail.key;
     console.info(" [ index.js ] ================= search >>>>>> data = ", data);
     wx.navigateTo({
-      url: "/pages/index/search/search?key=" + data
+      url: "/pages/subpage/search/search?key=" + data
     });
   },
 

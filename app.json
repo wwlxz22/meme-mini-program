@@ -1,7 +1,6 @@
 {
   "pages": [
-    "pages/index/index/index",
-    "pages/index/search/search",
+    "pages/index/index",
     "pages/category/category",
     "pages/mine/favorites/favorites",
     "pages/mine/feedback/feedback",
@@ -9,6 +8,7 @@
     "pages/mine/index/index",
     "pages/subpage/list/list",
     "pages/subpage/faceinfo/faceinfo",
+    "pages/subpage/search/search",
     "pages/subpage/edit/edit"
   ],
   "window": {
@@ -23,7 +23,7 @@
       {
         "iconPath": "/images/tabbar/home.png",
         "selectedIconPath": "/images/tabbar/home_fill.png",
-        "pagePath": "pages/index/index/index",
+        "pagePath": "pages/index/index",
         "text": "表情"
       },
       {
