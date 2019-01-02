@@ -3,7 +3,7 @@
 <!-- <loading wx:if="{{showLoading}}">加载中</loading> -->
 <view class='top'>
   <!-- 搜索 -->
-  <search id="search-bar" class="search-bar" maskTop="80" binddoSearch="search"/>
+  <search-bar id="search-bar" class="search-bar" maskTop="80" binddoSearch="search"/>
   <!-- 最新/最热 -->
   <view class="tab-area flex-row" style='justify-content: space-around; background: white;'>
     <view class="tab-item flex-column items-center" bindtap="changeType" data-type="newest">

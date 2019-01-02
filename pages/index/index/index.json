@@ -3,6 +3,6 @@
   "disableScroll": true,
   "usingComponents": {
     "face-item": "/components/face-item/face-item",
-    "search": "/components/search/search"
+    "search-bar": "/components/search-bar/search-bar"
   }
 }
