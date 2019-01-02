@@ -17,7 +17,7 @@ Page({
    */
   loadMore: function () {
     let that = this;
-    that.searchCall(that.data.initKey, that.data.pageNo);
+    that.searchCall(that.data.initKey, that.data.searchType, that.data.pageNo);
   },
 
   /**
@@ -37,15 +37,15 @@ Page({
     that.setData({
       initKey: data
     });
-    that.searchCall(data);
+    that.searchCall(data, that.data.searchType);
   },
 
   /**
    * 调用搜索
    */
-  searchCall: function (key, pageNo = 1) {
+  searchCall: function (key, type, pageNo = 1) {
     let that = this;
-    apiFuncs.search(key, that.data.type, pageNo).then(res => {
+    apiFuncs.search(key, type, pageNo).then(res => {
       console.info(" [ index.js ] ============== search >>>>> = res = ", res);
       if (res.data.length > 0) {
         let newList = [];
@@ -85,11 +85,12 @@ Page({
       success: function (res) {
         that.setData({
           height: res.windowHeight - 80
-        })
+        });
       },
     });
     that.setData({
-      initKey: key
+      initKey: key,
+      searchType: options.type
     });
     that.selectComponent('#search-bar').setContent(key);
     that.searchCall(key);

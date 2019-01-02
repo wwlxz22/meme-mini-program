@@ -25,7 +25,7 @@ Page({
     let data = e.detail.key;
     console.info(" [ index.js ] ================= search >>>>>> data = ", data);
     wx.navigateTo({
-      url: "/pages/subpage/search/search?key=" + data
+      url: "/pages/subpage/search/search?key=" + data + "&type=face"
     });
   },
 
