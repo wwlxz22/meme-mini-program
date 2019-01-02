@@ -9,7 +9,9 @@ Page({
   data: {
     initKey: "",
     faceList: [],
-    type: "face", // 搜索类型 face tag
+    tagList: [],
+    pageNo: 1,
+    searchType: "face", // 搜索类型 face tag
   },
 
   /**
@@ -18,6 +20,23 @@ Page({
   loadMore: function () {
     let that = this;
     that.searchCall(that.data.initKey, that.data.searchType, that.data.pageNo);
+  },
+
+  /**
+   * 修改搜索类型 
+   * @param {*} e 
+   */
+  changeType: function (e) {
+    console.info(" [ search.js ] =================== changeType >>>>>> e = ", e);
+    let that = this,
+      data = e.currentTarget.dataset;
+    if (that.data.searchType == data.type) {
+      return;
+    }
+    that.setData({
+      searchType: data.type,
+    });
+    that.searchCall(that.data.initKey, data.type);
   },
 
   /**
@@ -47,29 +66,31 @@ Page({
     let that = this;
     apiFuncs.search(key, type, pageNo).then(res => {
       console.info(" [ index.js ] ============== search >>>>> = res = ", res);
+      let newFaceList = [],
+        newTagList = [],
+        newPageNo = pageNo;
       if (res.data.length > 0) {
         let newList = [];
         if (pageNo == 1) {
           newList = res.data;
         } else {
-          newList = that.data.faceList.concat(res.data);
+          newList = that.data.searchType == "face" ? that.data.faceList.concat(res.data) : that.data.tagList.concat(res.data);
         }
-        that.setData({
-          faceList: newList,
-          pageNo: pageNo + 1
-        });
+        if (type == "face") newFaceList = newList;
+        else newTagList = newList;
+        newPageNo = pageNo + 1;
       } else {
-        if (pageNo == 1) {
-          that.setData({
-            faceList: [],
-            pageNo: pageNo
-          });
-        } else {
-          that.setData({
-            pageNo: pageNo
-          });
+        if (pageNo != 1) {
+          if (type == "face") newFaceList = that.data.faceList;
+          else newTagList = that.data.tagList;
         }
       }
+      console.info(" [ search.js ] ==================== searchCall >>>>> newPageNo =  ", newPageNo);
+      that.setData({
+        faceList: newFaceList,
+        tagList: newTagList,
+        pageNo: newPageNo,
+      })
     });
   },
 
@@ -93,7 +114,7 @@ Page({
       searchType: options.type
     });
     that.selectComponent('#search-bar').setContent(key);
-    that.searchCall(key);
+    that.searchCall(key, options.type);
   },
 
   /**

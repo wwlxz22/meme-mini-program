@@ -8,6 +8,32 @@
   width: 100%;
 }
 
+.tab-area {
+  height: 60rpx;
+  width: 750rpx;
+}
+
+.tab-item {
+  flex: 1;
+  height: 60rpx;
+  justify-content: space-between;
+}
+
+.tab-title {
+  margin-left: 4rpx;
+  margin-top: 10rpx;
+  font-family: PingFangSC;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.tab-line {
+  width: 80rpx;
+  height: 6rpx;
+  bottom: 0;
+  background-color: #ffd748;
+}
+
 .list-area {
   width: 750rpx;
   display: flex;
