@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "分类",
   "usingComponents": {
-    "category-item": "/components/category-item/category-item",
+    "tag-item": "/components/tag-item/tag-item",
     "search-bar": "/components/search-bar/search-bar"
   }
 }

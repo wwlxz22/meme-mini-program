@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/category/category",
+    "pages/bundle/bundle",
+    "pages/mine/index/index",
     "pages/mine/favorites/favorites",
     "pages/mine/feedback/feedback",
     "pages/mine/minis/minis",
-    "pages/mine/index/index",
     "pages/subpage/list/list",
     "pages/subpage/faceinfo/faceinfo",
     "pages/subpage/search/search",
@@ -27,9 +27,9 @@
         "text": "表情"
       },
       {
-        "iconPath": "/images/tabbar/category.png",
-        "selectedIconPath": "/images/tabbar/category_fill.png",
-        "pagePath": "pages/category/category",
+        "iconPath": "/images/tabbar/bundle.png",
+        "selectedIconPath": "/images/tabbar/bundle_fill.png",
+        "pagePath": "pages/bundle/bundle",
         "text": "表情包"
       },
       {
