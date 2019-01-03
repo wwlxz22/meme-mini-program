@@ -1,5 +1,6 @@
-<search-bar class="search-bar" maskTop="40" binddoSearch="search" />
-<scroll-view style='width: 100%; height: 100%;'>
+<search-bar class="search-bar" maskTop="42" binddoSearch="search" />
+
+<scroll-view style='width: 750rpx; height: {{height}};'>
   <view class='tag-area flex-row items-center'>
     <block wx:for="{{tagList}}" wx:for-item="tag" wx:key="key">
       <view class="category flex-center">{{tag.name}}</view>

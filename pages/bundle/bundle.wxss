@@ -1,8 +1,15 @@
 @import "../../common/common.wxss";
 
+.search-bar{
+  height: 100rpx;
+  position: fixed;
+  z-index: 99999;
+}
+
 .tag-area {
   width: 100%;
   flex-wrap: wrap;
+  margin-top: 100rpx;
   padding: 25rpx 15rpx 25rpx 10rpx;
 }
 

@@ -8,6 +8,7 @@ Page({
    */
   data: {
     tagList: [], // 分类列表
+    height: 0,
   },
 
   /**
@@ -27,6 +28,14 @@ Page({
    */
   onLoad: function (options) {
     let that = this;
+    // 获取屏幕高度
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          height: res.windowHeight - 60
+        });
+      },
+    });
     // 获取分类列表
     apiFuncs.getRecomTag().then(res => {
       that.setData({
