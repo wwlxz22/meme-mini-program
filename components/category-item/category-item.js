@@ -6,7 +6,7 @@ Component({
   properties: {
     cover: String,
     title: String,
-    cid: Number
+    tagid: Number
   },
 
   /**
@@ -26,7 +26,7 @@ Component({
     _navigateToList: function () {
       let that = this;
       wx.navigateTo({
-        url: '/pages/subpage/list/list?tagId=' + that.properties.cid + "&tag=" + that.properties.title,
+        url: '/pages/subpage/list/list?tagId=' + that.properties.tagid + "&tag=" + that.properties.title,
       });
     }
   }

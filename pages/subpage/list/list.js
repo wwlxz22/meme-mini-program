@@ -37,8 +37,10 @@ Page({
     let that = this,
       tagId = options.tagId;
     wx.setNavigationBarTitle({
-      title: options.tag,
-      tag_id: tagId
+      title: options.tag
+    });
+    that.setData({
+      tagId: tagId
     });
     that.getFaceList(tagId);
   },
