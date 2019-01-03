@@ -17,7 +17,7 @@
       <face-item class="face-item" raw="{{item.raw_url}}" full="{{item.full_url}}" faceid="{{item.face_id}}" isgif="{{item.is_gif}}" diytype="{{item.diy_type}}" />
     </block>
   </view>
-  <view wx:else>
+  <view class="tag-area" wx:else>
     <block wx:for="{{tagList}}" wx:key="key">
       <category-item class="tag-item" cid="{{item.category_id}}" cover="{{item.cover}}" title="{{item.name}}" />
     </block>
