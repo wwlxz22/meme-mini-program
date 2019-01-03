@@ -3,6 +3,6 @@
   "usingComponents": {
     "face-item": "/components/face-item/face-item",
     "search-bar": "/components/search-bar/search-bar",
-    "category-item": "/components/category-item/category-item"
+    "tag-item": "/components/tag-item/tag-item"
   }
 }

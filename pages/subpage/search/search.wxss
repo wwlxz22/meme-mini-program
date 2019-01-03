@@ -37,10 +37,10 @@
 .list-area {
   width: 750rpx;
   display: flex;
-  margin-top: 45px;
+  margin-top: 140rpx;
   padding-top: 15rpx;
   flex-direction: row;
-  flex-wrap: row wrap;
+  flex-wrap: row wrap
 }
 
 .face-item {

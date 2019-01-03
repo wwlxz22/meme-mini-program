@@ -1,4 +1,7 @@
-<view class="item-main flex-column items-center" bindtap="_navigateToList">
+<view class="item-main flex-column items-center" bindtap="_navigateToList" wx:if="{{cover}}">
   <image class="item-cover" src='{{cover}}' />
   <text class="item-title flex-row items-center justify-center">{{title}}</text>
+</view>
+<view class="no-cover flex-center" bindtap="_navigateToList" wx:else>
+  <text class="item-title">{{title}}</text>
 </view>

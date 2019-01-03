@@ -6,15 +6,20 @@
   background: white;
 }
 
+.no-cover{
+  width: 160rpx;
+  height:  80rpx;
+}
+
 .item-cover {
   width: 160rpx;
   height: 160rpx;
+  padding: 0 5rpx 0 5rpx;
 }
 
 .item-title {
-  width: 130rpx;
-  height: 32rpx;
   font-family: PingFangSC;
   font-size: 24rpx;
   color: #000000;
+  text-align: center;
 }
