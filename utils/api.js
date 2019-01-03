@@ -7,8 +7,8 @@ const BASE_URL = DEVELOP_URL;
 module.exports = {
   LOGIN: BASE_URL + `/user/login`, // 登陆接口
   FEEDBACK: BASE_URL + `/user/feedback`, // 反馈
-  CATEGORY_LIST: BASE_URL + `/category/list`, // 分类列表
-  FACES_BY_CATEGORY: BASE_URL + `/face/category`, // 分类获取表情
+  RECOM_TAG: BASE_URL + `/tag/recom`, // 推荐标签
+  FACES_BY_TAG: BASE_URL + `/face/tag`, // 分类获取表情
   SEARCH: BASE_URL + `/face/search`, // 搜索
   ADD_FAVORITE: BASE_URL + `/favorite/add`, // 收藏
   STAR_FACES: BASE_URL + `/face/star`, // 明星头像

@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    categoryList: [], // 分类列表
+    tagList: [], // 分类列表
   },
 
   /**
@@ -28,9 +28,9 @@ Page({
   onLoad: function (options) {
     let that = this;
     // 获取分类列表
-    apiFuncs.getCategoryList().then(res => {
+    apiFuncs.getRecomTag().then(res => {
       that.setData({
-        categoryList: res.data
+        tagList: res.data
       });
     });
   },

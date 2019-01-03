@@ -14,19 +14,19 @@ const login = (code) => {
 /**
  * 获取分类列表
  */
-const getCategoryList = () => {
-  return wxFuncs.request(api.CATEGORY_LIST);
+const getRecomTag = () => {
+  return wxFuncs.request(api.RECOM_TAG);
 }
 
 /**
  * 根据类型获取表情
  */
-const getFaceListByCategory = (categoryId, pageNo = 1) => {
+const getFaceListByTag = (tagId, pageNo = 1) => {
   let data = {
-    category_id: categoryId,
+    tag_id: tagId,
     pageNo: pageNo
   }
-  return wxFuncs.request(api.FACES_BY_CATEGORY, data);
+  return wxFuncs.request(api.FACES_BY_TAG, data);
 }
 
 /**
@@ -105,13 +105,13 @@ const feedback = (title, content) => {
 }
 
 module.exports = {
-  login: login,
-  getCategoryList: getCategoryList,
-  getFaceListByCategory: getFaceListByCategory,
-  addFavorite: addFavorite,
-  search: search,
-  getStarFaces: getStarFaces,
-  getFavoriteList: getFavoriteList,
-  isFavorite: isFavorite,
-  feedback: feedback
+  login,
+  getRecomTag,
+  getFaceListByTag,
+  addFavorite,
+  search,
+  getStarFaces,
+  getFavoriteList,
+  isFavorite,
+  feedback
 }
