@@ -8,7 +8,7 @@ Page({
    */
   data: {
     pageNo: 1,
-    categoryId: 0,
+    tagId: 0,
     faceList: [],
     title: ""
   },
@@ -16,9 +16,9 @@ Page({
   /**
    * 获取表情列表
    */
-  getFaceList: function(id, pageNo = 1) {
+  getFaceList: function (id, pageNo = 1) {
     let that = this;
-    apiFuncs.getFaceListByCategory(id, pageNo).then(res => {
+    apiFuncs.getFaceListByTag(id, pageNo).then(res => {
       if (res.code == 2000 && res.data.length > 0) {
         let newList = that.data.faceList.concat(res.data);
         that.setData({
@@ -32,64 +32,64 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     console.info(" [ list.js ] =============== onLoad >>>>> options = ", options);
     let that = this,
-      id = options.id;
+      tagId = options.tagId;
     wx.setNavigationBarTitle({
-      title: options.category,
-      categoryId: id
+      title: options.tag,
+      tag_id: tagId
     });
-    that.getFaceList(id);
+    that.getFaceList(tagId);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
     let that = this;
-    that.getFaceList(that.data.categoryId, that.data.pageNo);
+    that.getFaceList(that.data.tagId, that.data.pageNo);
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
     return funcs.getShareData();
   }
 })

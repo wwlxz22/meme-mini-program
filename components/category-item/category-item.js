@@ -23,10 +23,10 @@ Component({
     /**
      * 跳转到图片列表页
      */
-    _navigateToList: function() {
+    _navigateToList: function () {
       let that = this;
       wx.navigateTo({
-        url: '/pages/subpage/list/list?id=' + that.properties.cid + "&category=" + that.properties.title,
+        url: '/pages/subpage/list/list?tagId=' + that.properties.cid + "&tag=" + that.properties.title,
       });
     }
   }
