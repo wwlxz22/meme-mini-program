@@ -1,0 +1,12 @@
+<view class="main flex-row items-center">
+  <image class="icon" src="{{url}}" />
+  <view class="right flex-row items-center">
+    <view class="info flex-column">
+      <view class="name">{{name}}</view>
+      <view class="desc">{{desc}}</view>
+    </view>
+    <navigator class="btn flex-center" open-type='navigate' target="miniProgram" app-id="{{appid}}" path="{{path}}" version="release">
+      去看看
+    </navigator>
+  </view>
+</view>

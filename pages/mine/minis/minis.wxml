@@ -1,5 +1,5 @@
-<view class="minis-wrap flex-row">
-  <minis class="minis" title="捏捏宠" url="/images/minis/nieniepet.jpeg" path="/pages/index/index" appid="wxb10e8fd6be9a8ffc" />
-  <minis class="minis" title="Plank" url="/images/minis/plank.jpeg" path="/pages/index/index" appid="wx4b3e763b32874fab" />
-  <minis class="minis" title="广场舞" url="/images/minis/guangchangwu.jpeg" path="/pages/index/index" appid="wxf5c23cb477dc7371" />
+<view class="minis-wrap flex-column items-center">
+  <minis-item class="minis" name="捏捏宠" desc="撸猫撸狗，这里都有" url="/images/minis/nieniepet.png" path="/pages/index/index" appid="wxb10e8fd6be9a8ffc" />
+  <minis-item class="minis" name="平板支撑" desc="完美身材，用了就知道" url="/images/minis/plank.jpg" path="/pages/index/index" appid="wx4b3e763b32874fab" />
+  <minis-item class="minis" name="广场舞" desc="姐姐们的舞姿着实好看呢" url="/images/minis/guangchangwu.gif" path="/pages/index/index" appid="wxf5c23cb477dc7371" />
 </view>

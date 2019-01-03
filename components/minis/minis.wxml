@@ -1,4 +1,0 @@
-<navigator class="main flex-column items-center" open-type='navigate' target="miniProgram" app-id="{{appid}}" path="{{path}}" version="release">
-  <image class="icon" src="{{url}}" />
-  <view class="title flex-row flex-center">{{title}}</view>
-</navigator>

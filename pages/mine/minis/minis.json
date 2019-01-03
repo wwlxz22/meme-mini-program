@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "精品推荐",
   "usingComponents": {
-    "minis": "/components/minis/minis"
-  }
+    "minis-item": "/components/minis-item/minis-item"
+  },
+  "disableScroll": true
 }

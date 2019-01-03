@@ -1,5 +1,5 @@
-const apiFuncs = require("../../../utils/apiFuncs.js");
-const funcs = require("../../../utils/funcs.js");
+// const apiFuncs = require("../../../utils/apiFuncs.js");
+// const funcs = require("../../../utils/funcs.js");
 
 Page({
 

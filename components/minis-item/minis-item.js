@@ -5,9 +5,10 @@ Component({
    */
   properties: {
     url: String,
-    title: String,
     path: String,
-    appid: String
+    appid: String,
+    name: String,
+    desc: String
   },
 
   /**

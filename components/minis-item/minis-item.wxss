@@ -1,0 +1,46 @@
+@import "../../common/common.wxss";
+
+.main {
+  width: 700rpx;
+  height: 180rpx;
+  border-radius: 30rpx;
+  background: #88BEE566;
+}
+.icon {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 25rpx;
+  margin-left: 25rpx;
+  background: white;
+}
+
+.right{
+  flex:1;
+  justify-content: space-between;
+}
+
+.info{
+  margin-left: 25rpx;
+  /* flex:1; */
+}
+
+.name{
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+}
+
+.desc{
+font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+}
+
+.btn{
+  width: 130rpx;
+  height: 52rpx;
+  background: #f92974AA;
+  font-family: PingFangSC-Medium;
+  color: white;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  margin-right: 25rpx;
+}
