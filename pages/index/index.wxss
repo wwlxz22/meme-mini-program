@@ -12,6 +12,7 @@
 .tab-area {
   height: 88rpx;
   width: 750rpx;
+  padding-top: 21rpx;
 }
 
 .tab-item {
