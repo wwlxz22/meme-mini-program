@@ -1,17 +1,12 @@
 @import "../../common/common.wxss";
 
-.container {
-  width: 750rpx;
-  height: 100rpx;
-  background: white;
-}
-
 .main {
   width: 650rpx;
   height: 88rpx;
   border-radius: 3px;
   border: solid 1rpx #ededed;
-  box-shadow: 0 4px 4px 0 rgba(239, 239, 239, 0.25);
+  background: white;
+  /* box-shadow: 0 4px 4px 0 rgba(239, 239, 239, 0.25); */
 }
 
 .left-wrap {

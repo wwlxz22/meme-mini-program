@@ -2,7 +2,7 @@
 <!-- <loading wx:if="{{showLoading}}">加载中</loading> -->
 <view class='top'>
   <!-- 搜索 -->
-  <view class="search-wrap">
+  <view class="search-wrap flex-row justify-center">
     <search-bar id="search-bar" maskTop="96" binddoSearch="search" />
   </view>
   <!-- 最新/最热 -->

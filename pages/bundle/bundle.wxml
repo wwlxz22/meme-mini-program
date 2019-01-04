@@ -1,4 +1,4 @@
-<view class="search-wrap">
+<view class="search-wrap flex-row justify-center">
   <search-bar class="search-bar" maskTop="60" binddoSearch="search" />
 </view>
 <scroll-view class="tag-area" style='width: 750rpx; height: {{height}};'>

@@ -2,17 +2,22 @@
 
 .search-wrap{
   top: 0;
+  width: 750rpx;
   height: 120rpx;
   padding-top: 21rpx;
-  background: white;
+  /* background: #f7f7f7; */
   position: fixed;
   z-index: 99999;
+}
+
+.search-bar{
+  width: 650rpx;
 }
 
 .tag-area {
   width: 100%;
   flex-wrap: wrap;
-  margin-top: 60rpx;
+  margin-top: 35rpx;
   padding: 25rpx 15rpx 25rpx 10rpx;
 }
 

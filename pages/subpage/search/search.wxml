@@ -1,5 +1,7 @@
 <view class='search-area'>
-  <search-bar id="search-bar" class="search-bar" maskTop="40" binddoSearch="search" />
+  <view class="search-wrap flex-row justify-center">
+    <search-bar id="search-bar" class="search-bar" maskTop="40" binddoSearch="search" />
+  </view>
   <view class="tab-area flex-row" style='justify-content: space-around; background: white;'>
     <view class="tab-item flex-column items-center" bindtap="changeType" data-type="face">
       <view class="tab-title">表情</view>
