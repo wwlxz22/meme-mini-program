@@ -32,7 +32,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          height: res.windowHeight - 60
+          height: res.windowHeight - 90
         });
       },
     });
