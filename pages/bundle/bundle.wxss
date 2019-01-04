@@ -1,7 +1,12 @@
 @import "../../common/common.wxss";
 
+.search-wrap{
+  height: 120rpx;
+  padding-top: 21rpx;
+  background: white;
+}
+
 .search-bar{
-  height: 100rpx;
   position: fixed;
   z-index: 99999;
 }
