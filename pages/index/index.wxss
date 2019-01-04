@@ -43,7 +43,7 @@
 .list-area {
   width: 750rpx;
   display: flex;
-  margin-top: 100px;
+  margin-top: 196rpx;
   padding-top: 15rpx;
   padding-left: 5rpx;
   flex-direction: row;

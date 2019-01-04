@@ -20,7 +20,7 @@
         <image class="func-icon" src="/images/icon/like.png" wx:if="{{isFavorite == 0}}" />
         <image class="func-icon" src="/images/icon/like_fill.png" wx:else />
       </view>
-      <view class="func-tip">待收藏</view>
+      <view class="func-tip">收藏</view>
     </view>
   </view>
 </view>
