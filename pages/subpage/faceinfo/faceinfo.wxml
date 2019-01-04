@@ -13,7 +13,7 @@
       <view class="func-item flex-center">
         <image class="func-icon" src="/images/icon/edit.png" />
       </view>
-      <view class="func-tip">可编辑</view>
+      <view class="func-tip">编辑</view>
     </view>
     <view class="flex-column items-center">
       <view class="func-item flex-center" bindtap='addFavorite'>
