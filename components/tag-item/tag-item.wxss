@@ -9,6 +9,7 @@
 .no-cover{
   width: 160rpx;
   height:  80rpx;
+  background: #EBF1F5;
 }
 
 .item-cover {
