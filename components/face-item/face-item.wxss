@@ -8,8 +8,8 @@
 }
 
 .image {
-  width: 130rpx;
-  height: 130rpx;
+  width: 190rpx;
+  height: 190rpx;
 }
 
 .image-wrap {
