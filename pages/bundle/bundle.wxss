@@ -18,6 +18,8 @@
 
 .category{
   width: 750rpx;
+  height: 100rpx;
+  font-family: PingFangSC-Medium;
 }
 
 .tag-item {
