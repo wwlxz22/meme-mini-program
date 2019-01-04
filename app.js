@@ -1,5 +1,5 @@
-const apiFuncs = require("./utils/apiFuncs.js");
-const wxFuncs = require("./utils/wxFuncs.js");
+import { apiFuncs } from "./utils/apiFuncs.js";
+import { wxFuncs } from "./utils/wxFuncs";
 
 App({
   onLaunch: function() {

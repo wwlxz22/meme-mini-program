@@ -1,6 +1,5 @@
-import {
-  apiFuncs
-} from "../../../utils/apiFuncs.js";
+import { apiFuncs } from "../../../utils/apiFuncs.js";
+import { funcs } from "../../../utils/funcs.js";
 
 Page({
 
@@ -23,6 +22,7 @@ Page({
         icon: "none"
       });
     } else {
+      console.info(apiFuncs);
       apiFuncs.feedback(data.title, data.content).then(res => {
         if (res.code == 2000) {
           wx.showToast({

@@ -49,8 +49,8 @@ const login = () => {
   });
 }
 
-module.exports = {
-  request: request,
-  loginedRequest: loginedRequest,
-  login: login
+export const wxFuncs = {
+  request,
+  loginedRequest,
+  login
 }

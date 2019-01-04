@@ -3,7 +3,7 @@
 .item-main {
   width: 160rpx;
   height: 220rpx;
-  background: #CAE0F0;
+  background: #EBF1F5;
 }
 
 .no-cover{

@@ -13,6 +13,6 @@ const getShareData = () => {
   }
 }
 
-module.exports = {
+export const funcs = {
   getShareData: getShareData
 }

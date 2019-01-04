@@ -4,7 +4,7 @@ const PRODUCT_URL = `https://doutu.xiaochongleyuan.com/api/face`;
 // const BASE_URL = DEVELOP_URL;
 const BASE_URL = PRODUCT_URL;
 
-module.exports = {
+export const api = {
   LOGIN: BASE_URL + `/user/login`, // 登陆接口
   FEEDBACK: BASE_URL + `/user/feedback`, // 反馈
   RECOM_TAG: BASE_URL + `/tag/recom`, // 推荐标签

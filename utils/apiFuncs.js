@@ -1,5 +1,5 @@
-const api = require("../utils/api.js");
-const wxFuncs = require("../utils/wxFuncs.js");
+import { api } from "../utils/api.js";
+import { wxFuncs } from "../utils/wxFuncs.js";
 
 /**
  * 登陆
@@ -104,7 +104,7 @@ const feedback = (title, content) => {
   return wxFuncs.loginedRequest(api.FEEDBACK, data, "POST");
 }
 
-module.exports = {
+export const apiFuncs = {
   login,
   getRecomTag,
   getFaceListByTag,

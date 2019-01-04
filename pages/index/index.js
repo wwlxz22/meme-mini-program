@@ -1,9 +1,8 @@
-//index.js
-//获取应用实例
-let url = "https://www.xiaochongleyuan.com/api";
+import { apiFuncs } from "../../utils/apiFuncs.js";
+import { funcs } from "../../utils/funcs.js";
+
 const app = getApp();
-const apiFuncs = require("../../utils/apiFuncs.js");
-const funcs = require("../../utils/funcs.js");
+let url = "https://www.xiaochongleyuan.com/api";
 
 Page({
   data: {

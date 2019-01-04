@@ -1,5 +1,4 @@
-// const apiFuncs = require("../../../utils/apiFuncs.js");
-// const funcs = require("../../../utils/funcs.js");
+import { funcs } from "../../../utils/funcs.js";
 
 Page({
 
