@@ -4,7 +4,7 @@
   width: 700rpx;
   height: 180rpx;
   border-radius: 30rpx;
-  background: #88BEE566;
+  background: #CAE0F0;
 }
 .icon {
   width: 130rpx;
@@ -37,7 +37,7 @@ font-size: 28rpx;
 .btn{
   width: 130rpx;
   height: 52rpx;
-  background: #f92974AA;
+  background: #E9669D;
   font-family: PingFangSC-Medium;
   color: white;
   border-radius: 30rpx;
