@@ -13,7 +13,7 @@ Page({
     y: 20,
     windowWidth: 0,
     windowHeight: 0,
-    size: 30, // 字体大小
+    size: 18, // 字体大小
     color: '#000000', // 字体颜色
     typeset: "single",
     line1: '',
