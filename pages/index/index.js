@@ -96,7 +96,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          height: res.windowHeight - 80
+          height: res.windowHeight - 100
         })
       },
     });
