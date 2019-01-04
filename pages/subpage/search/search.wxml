@@ -19,7 +19,7 @@
   </view>
   <view class="tag-area" wx:else>
     <block wx:for="{{tagList}}" wx:key="key">
-      <tag-item class="tag-item" cid="{{item.tag_id}}" title="{{item.name}}" />
+      <tag-item class="tag-item" tagid="{{item.tag_id}}" title="{{item.name}}" />
     </block>
   </view>
 </scroll-view>
