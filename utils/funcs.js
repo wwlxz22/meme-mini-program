@@ -9,7 +9,7 @@ const getShareData = () => {
   return {
     title: shareTitle[Math.floor(Math.random() * 3)],
     imageUrl: shareImage[Math.floor(Math.random() * 3)],
-    path: "/pages/index/index/index"
+    path: "/pages/index/index"
   }
 }
 
