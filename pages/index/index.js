@@ -13,7 +13,18 @@ Page({
     pageNo: 1,
     currentType: "newest",
     faceList: [],
-    showLoading: false
+    showLoading: false,
+    scrollTop: 0
+  },
+
+  /**
+   * 滚动到顶部
+   */
+  scrollToTop: function () {
+    let that = this;
+    that.setData({
+      scrollTop: 0
+    });
   },
 
   /**
@@ -88,6 +99,7 @@ Page({
       currentType: data.type
     });
     that.getFaceList(data.type, 1);
+    that.scrollToTop();
   },
 
   onLoad: function () {
