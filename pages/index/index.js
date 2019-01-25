@@ -31,9 +31,7 @@ Page({
    * 搜索
    */
   search: function (e) {
-    console.info(" [ index.js ] ================= search >>>>>> e = ", e);
     let data = e.detail.key;
-    console.info(" [ index.js ] ================= search >>>>>> data = ", data);
     wx.navigateTo({
       url: "/pages/subpage/search/search?key=" + data + "&type=face"
     });
@@ -52,13 +50,9 @@ Page({
    */
   getFaceList(type, pageNo = 1) {
     let that = this;
-    that.setData({
-      showLoading: true
-    });
+    wx.showNavigationBarLoading();
     apiFuncs.getStarFaces(type, pageNo).then(res => {
-      that.setData({
-        showLoading: false
-      });
+      wx.hideNavigationBarLoading();
       if (res.code != 2000) {
         return;
       }
