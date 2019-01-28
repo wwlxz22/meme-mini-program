@@ -81,7 +81,7 @@
 .list-area {
   width: 750rpx;
   display: flex;
-  margin-top: 200rpx;
+  margin-top: 206rpx;
   padding-top: 15rpx;
   padding-left: 5rpx;
   flex-direction: row;
@@ -92,7 +92,7 @@
   width: 190rpx;
   height: 190rpx;
   margin-left: 40rpx;
-  margin-top: 40rpx;
+  margin-bottom: 40rpx;
   display: inline-flex;
   border-radius: 15rpx;
   overflow: hidden;

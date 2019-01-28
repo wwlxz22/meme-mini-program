@@ -23,6 +23,18 @@ Component({
       wx.makePhoneCall({
         phoneNumber: phone,
       })
+    },
+    copy: function (e) {
+      let value = e.currentTarget.dataset.value;
+      wx.setClipboardData({
+        data: value,
+        success: function (res) {
+          wx.showToast({
+            title: "微信号码已复制",
+            icon: "none"
+          });
+        }
+      });
     }
   }
 })
