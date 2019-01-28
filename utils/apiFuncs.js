@@ -17,6 +17,12 @@ const login = (code) => {
 const getRecomTag = () => {
   return wxFuncs.request(api.RECOM_TAG);
 }
+/**
+ * 获取热推标签
+ */
+const getHotTag = () => {
+  return wxFuncs.request(api.HOT_TAG);
+}
 
 /**
  * 根据类型获取表情
@@ -107,6 +113,7 @@ const feedback = (title, content) => {
 export const apiFuncs = {
   login,
   getRecomTag,
+  getHotTag,
   getFaceListByTag,
   addFavorite,
   search,

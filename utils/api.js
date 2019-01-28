@@ -8,6 +8,7 @@ export const api = {
   LOGIN: BASE_URL + `/user/login`, // 登陆接口
   FEEDBACK: BASE_URL + `/user/feedback`, // 反馈
   RECOM_TAG: BASE_URL + `/tag/recom`, // 推荐标签
+  HOT_TAG:BASE_URL+`/tag/hot`, // 热门标签
   FACES_BY_TAG: BASE_URL + `/face/tag`, // 分类获取表情
   SEARCH: BASE_URL + `/face/search`, // 搜索
   ADD_FAVORITE: BASE_URL + `/favorite/add`, // 收藏

@@ -11,10 +11,11 @@ Page({
     cate_id: 1,
     height: 0,
     pageNo: 1,
-    currentType: "newest",
+    currentType: "hottest",
     faceList: [],
     showLoading: false,
-    scrollTop: 0
+    scrollTop: 0,
+    hotTagList:[],
   },
 
   /**
@@ -105,7 +106,20 @@ Page({
         })
       },
     });
-    that.getFaceList("newest", 1);
+    that.getHotTagList();
+    that.getFaceList("hottest", 1);
+  },
+
+  /**
+   * 热门标签
+   */
+  getHotTagList: function () {
+    let that = this;
+    apiFuncs.getHotTag().then(res => {
+      that.setData({
+        hotTagList:res.data
+      });
+    });
   },
 
   /**

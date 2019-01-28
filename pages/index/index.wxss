@@ -6,6 +6,44 @@
   background: white;
 }
 
+.hot-tags{
+  width: 750rpx;
+  height: 220rpx;
+}
+
+.hot-tags .wx-swiper-dot {
+  width: 30rpx;
+  height: 6rpx;
+  display: inline-flex;
+  justify-content: space-between;
+  border-radius: 50%;
+}
+
+.hot-tags .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: #E6E6E6;
+}
+
+.hot-tags .wx-swiper-dot-active::before {
+  background: #F9D763;
+}
+
+.hot-page {
+  width: 750rpx;
+  height: 220rpx;
+  padding: 30rpx 0 30rpx 50rpx;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.hot-tag{
+  display: inline-block;
+  margin-right: 14rpx;
+  margin-bottom: 20rpx;
+  width: 152rpx;
+  height: 60rpx;
+}
 
 .tab-area {
   height: 88rpx;
@@ -43,7 +81,7 @@
 .list-area {
   width: 750rpx;
   display: flex;
-  margin-top: 196rpx;
+  margin-top: 200rpx;
   padding-top: 15rpx;
   padding-left: 5rpx;
   flex-direction: row;
