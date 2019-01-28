@@ -18,6 +18,7 @@ page {
   height: 142rpx;
   margin-top: 32rpx;
   justify-content: space-between;
+  margin-bottom: 250rpx;
 }
 
 .func-item {
