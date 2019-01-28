@@ -40,9 +40,9 @@ Page({
    * 获取表情
    */
   getFaceList: function(pageNo = 1) {
+    wx.showNavigationBarLoading();
     let that = this;
     apiFuncs.getFavoriteList(pageNo).then(res => {
-      console.info(" [ favorites.js ] ================ getFaceList >>>>> res = ", res);
       if (res.code != 2000) {
         return;
       }
@@ -52,6 +52,7 @@ Page({
           pageNo: pageNo + 1
         });
       }
+      wx.hideNavigationBarLoading();
     });
   },
 

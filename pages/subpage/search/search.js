@@ -63,9 +63,9 @@ Page({
    * 调用搜索
    */
   searchCall: function (key, type, pageNo = 1) {
+    wx.showNavigationBarLoading();
     let that = this;
     apiFuncs.search(key, type, pageNo).then(res => {
-      console.info(" [ index.js ] ============== search >>>>> = res = ", res);
       let newFaceList = [],
         newTagList = [],
         newPageNo = pageNo;
@@ -85,7 +85,7 @@ Page({
           else newTagList = that.data.tagList;
         }
       }
-      console.info(" [ search.js ] ==================== searchCall >>>>> newPageNo =  ", newPageNo);
+      wx.hideNavigationBarLoading();
       that.setData({
         faceList: newFaceList,
         tagList: newTagList,

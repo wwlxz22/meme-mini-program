@@ -18,6 +18,7 @@ Page({
    */
   getFaceList: function (id, pageNo = 1) {
     let that = this;
+    wx.showNavigationBarLoading();
     apiFuncs.getFaceListByTag(id, pageNo).then(res => {
       if (res.code == 2000 && res.data.length > 0) {
         let newList = that.data.faceList.concat(res.data);
@@ -26,6 +27,7 @@ Page({
           pageNo: pageNo + 1
         });
       }
+      wx.hideNavigationBarLoading();
     });
   },
 
