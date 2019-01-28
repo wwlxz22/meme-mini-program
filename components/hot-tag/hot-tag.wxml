@@ -1,4 +1,6 @@
 <view class="main flex-center" bindtap="_navigateToList">
     <view class="name">{{tagname}}</view>
-    <image class="icon" />
+    <view class="icon-wrap flex-row items-center">
+        <image class="icon" src="/images/icon/hottest.png" wx:if="{{ishot}}" />
+    </view>
 </view>
