@@ -46,14 +46,14 @@
 }
 
 .tab-area {
-  height: 88rpx;
+  height: 76rpx;
   width: 750rpx;
   padding-top: 21rpx;
 }
 
 .tab-item {
   flex: 1;
-  height: 88rpx;
+  height: 76rpx;
   justify-content: space-between;
 }
 
@@ -81,7 +81,7 @@
 .list-area {
   width: 750rpx;
   display: flex;
-  margin-top: 206rpx;
+  margin-top: 194rpx;
   padding-top: 15rpx;
   padding-left: 5rpx;
   flex-direction: row;
