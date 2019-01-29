@@ -17,19 +17,19 @@
 }
 
 .tab-area {
-  height: 60rpx;
+  height: 80rpx;
   width: 750rpx;
 }
 
 .tab-item {
   flex: 1;
-  height: 60rpx;
+  height: 80rpx;
   justify-content: space-between;
 }
 
 .tab-title {
   margin-left: 4rpx;
-  margin-top: 10rpx;
+  margin-top: 20rpx;
   font-family: PingFangSC;
   font-size: 24rpx;
   color: #000;
@@ -45,7 +45,7 @@
 .list-area {
   width: 750rpx;
   display: flex;
-  margin-top: 140rpx;
+  margin-top: 160rpx;
   padding-top: 15rpx;
   flex-direction: row;
   flex-wrap: row wrap
