@@ -1,5 +1,8 @@
 <import src="/template/footer/footer.wxml" xmlns:wx="http://www.w3.org/1999/xhtml" />
 <!-- <loading wx:if="{{showLoading}}">加载中</loading> -->
+<view class="bulingbuling flex-center" hidden='{{hideBulingbuling}}'>
+喜欢我们的产品就收藏或转发给斗友吧 ↑↑↑
+</view>
 <view class='top'>
   <!-- 搜索 -->
   <view class="search-wrap flex-row justify-center">

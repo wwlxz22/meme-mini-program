@@ -1,5 +1,9 @@
-import { apiFuncs } from "../../utils/apiFuncs.js";
-import { funcs } from "../../utils/funcs.js";
+import {
+  apiFuncs
+} from "../../utils/apiFuncs.js";
+import {
+  funcs
+} from "../../utils/funcs.js";
 
 const app = getApp();
 let url = "https://www.xiaochongleyuan.com/api";
@@ -15,13 +19,14 @@ Page({
     faceList: [],
     showLoading: false,
     scrollTop: 0,
-    hotTagList:[],
+    hotTagList: [],
+    hideBulingbuling: false
   },
 
   /**
    * 滚动到顶部
    */
-  scrollToTop: function () {
+  scrollToTop: function() {
     let that = this;
     that.setData({
       scrollTop: 0
@@ -31,7 +36,7 @@ Page({
   /**
    * 搜索
    */
-  search: function (e) {
+  search: function(e) {
     let data = e.detail.key;
     wx.navigateTo({
       url: "/pages/subpage/search/search?key=" + data + "&type=face"
@@ -41,7 +46,7 @@ Page({
   /**
    * 加载更多
    */
-  loadMore: function (e) {
+  loadMore: function(e) {
     let that = this;
     that.getFaceList(that.data.currentType, that.data.pageNo);
   },
@@ -86,7 +91,7 @@ Page({
   /** 
    * 修改分类
    */
-  changeType: function (e) {
+  changeType: function(e) {
     console.info(" [ index.js ] ============= changeType >>>>> e = ", e);
     let that = this,
       data = e.currentTarget.dataset;
@@ -97,15 +102,20 @@ Page({
     that.scrollToTop();
   },
 
-  onLoad: function () {
+  onLoad: function() {
     let that = this;
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         that.setData({
           height: res.windowHeight - 100
         })
       },
     });
+    setTimeout(function callback() {
+      that.setData({
+        hideBulingbuling: true
+      });
+    }, 5000);
     that.getHotTagList();
     that.getFaceList("hottest", 1);
   },
@@ -113,11 +123,11 @@ Page({
   /**
    * 热门标签
    */
-  getHotTagList: function () {
+  getHotTagList: function() {
     let that = this;
     apiFuncs.getHotTag().then(res => {
       that.setData({
-        hotTagList:res.data
+        hotTagList: res.data
       });
     });
   },
@@ -125,12 +135,12 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     let that = this;
     that.selectComponent('#search-bar').setContent("");
   },
 
-  jumpToShare: function (e) {
+  jumpToShare: function(e) {
     let [that, raw, src, faceId] = [this, e.currentTarget.dataset.raw, e.currentTarget.dataset.src, e.currentTarget.dataset.faceid];
     console.info(" raw = ", raw);
     console.info(" src = ", src);
@@ -139,7 +149,7 @@ Page({
     })
   },
 
-  getmore: function () {
+  getmore: function() {
     this.setData({
       pageNo: this.data.pageNo + 1
     });
@@ -153,7 +163,7 @@ Page({
         start: that.data.pageNo,
         cate_id: that.data.cate_id
       },
-      success: function (res) {
+      success: function(res) {
         //console.log(res.data)
         if (res.data.data.length == 0) {
           wx.showToast({

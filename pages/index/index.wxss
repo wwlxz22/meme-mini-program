@@ -1,12 +1,25 @@
 @import "../../common/common.wxss";
 @import "../../template/footer/footer.wxss";
 
+.bulingbuling {
+  width: 750rpx;
+  height: 60rpx;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,215,72,0.6);
+  color: white;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+}
+
 .search-wrap {
   padding-top: 21rpx;
   background: white;
 }
 
-.hot-tags{
+.hot-tags {
   width: 750rpx;
   height: 220rpx;
 }
@@ -22,11 +35,11 @@
 .hot-tags .wx-swiper-dot::before {
   content: '';
   flex-grow: 1;
-  background: #E6E6E6;
+  background: #e6e6e6;
 }
 
 .hot-tags .wx-swiper-dot-active::before {
-  background: #F9D763;
+  background: #f9d763;
 }
 
 .hot-page {
@@ -37,7 +50,7 @@
   align-content: flex-start;
 }
 
-.hot-tag{
+.hot-tag {
   display: inline-block;
   margin-right: 14rpx;
   margin-bottom: 20rpx;
