@@ -4,11 +4,12 @@
     width: 152rpx;
     height: 60rpx;
     background: white;
+    font-weight: bold;
 }
 
 .name{
     font-family: PingFangSC;
-    font-size: 20rpx;
+    font-size: 24rpx;
 }
 
 .icon-wrap{
