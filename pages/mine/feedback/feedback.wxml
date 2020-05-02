@@ -1,9 +1,9 @@
 <form bindsubmit="feedback">
   <view class="form">
-    <text class="title t1">反馈标题</text>
-    <input class="subject" type="text" name="title" />
+    <text class="title t1">联系方式</text>
+    <input class="subject" type="text" name="title" placeholder="手机/微信/邮箱"/>
     <view class="title t2">反馈内容</view>
-    <textarea class="content" name="content" />
+    <textarea class="content" name="content" placeholder="请您详细地描述您地问题，方便我们即使修改与反馈"/>
     <button class="submit flex-row items-center justify-center" form-type="submit">提交</button>
   </view>
 </form>

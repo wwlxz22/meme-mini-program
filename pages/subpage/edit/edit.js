@@ -170,7 +170,7 @@ Page({
     let [x, y] = [e.touches[0].pageX, e.touches[0].pageY];
     if (x < 20) x = 20;
     if (x > 320) x = 320;
-    if (y > (this.data.picHeight - 20)) y = this.data.picHeight - 20;
+    if (y > (this.data.picHeight - this.data.size/2)) y = this.data.picHeight - this.data.size/2;
     this.setData({
       x: x,
       y: y

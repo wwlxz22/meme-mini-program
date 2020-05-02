@@ -1,0 +1,47 @@
+<!--pages/avatar/avatar.wxml-->
+<view>
+
+  <button open-type="getUserInfo" bindgetuserinfo="getAvatar">确认使用</button>
+  
+</view>
+<view>
+  <view>
+    <button>方形头像</button>
+    <button>原型头像</button>
+    <button>周围留白</button>
+  </view>
+  <view>
+    <canvas canvas-id='my' style="width:{{picWidth}}px;height:{{picHeight}}px;"></canvas>
+  </view>
+
+  <scroll-view scroll-x="true" style="width: 100%">
+    <text>1111</text>
+    <text>2222</text>
+    <text>3333</text>
+    <text>444444</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+    <text>55555555555</text>
+
+  </scroll-view>
+
+
+  <scroll-view scroll-x enable-flex style="width: 100%;white-space: nowrap;display:flex;flex-direction:row">
+
+    <block wx:for="{{choices}}" wx:key="id">
+      <view bindtap="getAvatar">
+      <text>点击</text>
+      </view>
+    </block>
+
+  </scroll-view>
+
+
+
+
+</view>

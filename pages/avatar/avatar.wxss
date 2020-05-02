@@ -1,0 +1,14 @@
+/* pages/avatar/avatar.wxss */
+
+.scroll-view-item{
+  background-color: #eee;
+}
+.scroll{
+  display: flex;
+  flex-direction: row;
+  
+}
+image{
+  width: 300rpx;
+  height: 300rpx;
+}

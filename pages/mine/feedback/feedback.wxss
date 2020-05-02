@@ -24,9 +24,9 @@
 
 .subject {
   width: 610rpx;
-  height: 120rpx;
+  height: 100rpx;
   margin-top: 20rpx;
-  border-radius: 12px;
+  border-radius: 24rpx;
   background-color: white;
   font-family: PingFangSC-Medium;
   color: black;
@@ -34,7 +34,7 @@
 
 .content {
   width: 610rpx;
-  height: 520rpx;
+  height: 460rpx;
   margin-top: 20rpx;
   border-radius: 24rpx;
   background-color: white;
@@ -46,7 +46,7 @@
   height: 90rpx;
   margin-top: 80rpx;
   border-radius: 12rpx;
-  background-color: #f92974;
+  background-color: #2e312793;
   font-family: PingFangSC-Medium;
   font-size: 28rpx;
   color: #fff;

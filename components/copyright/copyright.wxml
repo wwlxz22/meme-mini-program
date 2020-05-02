@@ -1,6 +1,5 @@
 <!-- components/items/copyright/copyright.wxml -->
 <view class='container'>
-  <text class='copyright'>@copyright 苏州骁彰科技</text>
-  <!-- <view class="call" bindtap='call' data-phone='0512-87812479'>小程序开发请点击此处：0512-87812479</view> -->
-  <view class="call" bindtap='copy' data-value='1301802501'>小程序开发请点击并添加微信：1301802501</view>
+  <text class='copyright'>@copyright 骁彰科技</text>
+  <view class="call" bindtap='copy' data-value='18556970801'>小程序开发：18556970801 点击复制</view>
 </view>

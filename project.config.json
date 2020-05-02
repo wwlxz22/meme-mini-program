@@ -6,15 +6,36 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"postcss": true,
+		"postcss": false,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true,
+		"uglifyFileName": true,
+		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.7",
+	"libVersion": "2.10.2",
 	"appid": "wxa6a0a8789c7d92d0",
 	"projectname": "%E8%A1%A8%E6%83%853.0",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"qqappid": "1108100302",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,

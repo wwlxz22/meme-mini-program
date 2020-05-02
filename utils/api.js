@@ -1,7 +1,7 @@
-const DEVELOP_URL = `http://doutu.test/api/face`;
-const PRODUCT_URL = `https://doutu.xiaochongleyuan.com/api/face`;
+const DEVELOP_URL = `http://127.0.0.1:8888/api/meme`;
+const PRODUCT_URL = `https://api.xiaoshouchen.com/api/meme`;
 
-// const BASE_URL = DEVELOP_URL;
+//const BASE_URL = DEVELOP_URL;
 const BASE_URL = PRODUCT_URL;
 
 export const api = {

@@ -1,7 +1,7 @@
 <import src="/template/footer/footer.wxml" xmlns:wx="http://www.w3.org/1999/xhtml" />
 <!-- <loading wx:if="{{showLoading}}">加载中</loading> -->
 <view class="bulingbuling flex-center" hidden='{{hideBulingbuling}}'>
-喜欢我们的产品就收藏或转发给斗友吧 ↑↑↑
+  喜欢我们的产品就收藏或转发给斗友吧 ↑↑↑
 </view>
 <view class='top'>
   <!-- 搜索 -->
@@ -58,6 +58,7 @@
   <!-- 表情 -->
   <block wx:for="{{faceList}}" wx:for-item="item" wx:key="key" wx:index="index">
     <face-item class="face-item" raw="{{item.raw_url}}" full="{{item.full_url}}" faceid="{{item.face_id}}" isgif="{{item.is_gif}}" diytype="{{item.diy_type}}" />
-  </block>
+    
+ </block>
   <template is="footer" />
 </scroll-view>

@@ -9,7 +9,8 @@
     "pages/subpage/list/list",
     "pages/subpage/faceinfo/faceinfo",
     "pages/subpage/search/search",
-    "pages/subpage/edit/edit"
+    "pages/subpage/edit/edit",
+    "pages/avatar/avatar"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,6 +34,12 @@
         "text": "表情包"
       },
       {
+        "iconPath": "/images/tabbar/bundle.png",
+        "selectedIconPath": "/images/tabbar/bundle_fill.png",
+        "pagePath": "pages/avatar/avatar",
+        "text": "头像"
+      },
+      {
         "iconPath": "/images/tabbar/mine.png",
         "selectedIconPath": "/images/tabbar/mine_fill.png",
         "pagePath": "pages/mine/index/index",
@@ -44,5 +51,6 @@
     "wx4b3e763b32874fab",
     "wxb10e8fd6be9a8ffc",
     "wxf5c23cb477dc7371"
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }
